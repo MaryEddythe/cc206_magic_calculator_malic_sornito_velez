@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Homescreen',
       theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.Red),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
         useMaterial3: true,
       ),
       home: const Homescreen(),
