@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
       title: 'Sign Out',
       theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+        // useMaterial3: true,
       ),
       home: const Signout(),
     );
