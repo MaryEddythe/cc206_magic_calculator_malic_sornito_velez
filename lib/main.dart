@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cc206_magic_calculator_malic_sornito_velez/features/sign-in.dart';
+import 'package:cc206_magic_calculator_malic_sornito_velez/features/signout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,13 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Sign Out',
       theme: ThemeData(
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Signin(),
+      home: const Signout(),
     );
   }
 }
