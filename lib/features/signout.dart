@@ -11,7 +11,7 @@ class Signout extends StatelessWidget {
 	children: [
 
 
-        ]
+        ],
       ),
     );
   }
