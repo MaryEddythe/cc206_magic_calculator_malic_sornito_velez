@@ -7,12 +7,13 @@ class Signin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-	body:  Column(
+	body:  
+  Column(
 	children: [
-
+    Text("Sign in Calulator")
 
         ],
-      ),
+  ),
     );
   }
 }
