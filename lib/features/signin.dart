@@ -35,7 +35,7 @@ class Signin extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Container(
-                width: 225,
+                width: 225, 
                 child: TextFormField(
                   obscureText: true,
                   decoration: InputDecoration(
