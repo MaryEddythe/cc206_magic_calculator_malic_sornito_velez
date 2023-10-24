@@ -9,8 +9,8 @@ class Signin extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/wallpaper.jpg"), // Replace with the path to your image asset
-            fit: BoxFit.cover, // You can change the fit as needed
+            image: AssetImage("assets/images/wallpaper.jpg"), 
+            fit: BoxFit.cover, 
           ),
         ),
         child: Center(
