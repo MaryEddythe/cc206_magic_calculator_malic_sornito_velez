@@ -10,14 +10,6 @@ class CategoryNews extends StatefulWidget {
 class _CategoryNewsState extends State<CategoryNews> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: <Widget>[
-            Text("Eddythorial", style: TextStyle(color: Colors.blue)),
-          ],
-        ),
-      ),
-    );
+    return const Placeholder();
   }
 }
