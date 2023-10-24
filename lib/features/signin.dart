@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Signin extends StatelessWidget {
-  const Signin({super.key});
-//sample sign in rough draft lang//
+  const Signin({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/wallpaper.jpg"), 
-            fit: BoxFit.cover, 
+            image: AssetImage("assets/images/wallpaper.jpg"),
+            fit: BoxFit.cover,
           ),
         ),
         child: Center(
@@ -24,6 +24,10 @@ class Signin extends StatelessWidget {
                 child: TextFormField(
                   decoration: InputDecoration(
                     labelText: 'Username',
+                    labelStyle: GoogleFonts.poppins(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                    ),
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -35,21 +39,31 @@ class Signin extends StatelessWidget {
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Password',
+                    labelStyle: GoogleFonts.poppins(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                    ),
                     border: OutlineInputBorder(),
                   ),
                 ),
               ),
               SizedBox(height: 20),
-               ElevatedButton(
+              ElevatedButton(
               onPressed: () {
-             Navigator.pop(context);
-               },
-               style: ElevatedButton.styleFrom(
-               backgroundColor: Color(0xFF0b4f6c),
-               foregroundColor: Colors.white,
-               ),
-               child: Text('Sign In'),
-               )
+              Navigator.pop(context);
+              },
+              style: ElevatedButton.styleFrom(
+              primary: Color(0xFF0b4f6c),
+              onPrimary: Colors.white,
+             ),
+             child: Text(
+            'Sign In',
+             style: GoogleFonts.poppins( 
+            fontSize: 15,
+            fontWeight: FontWeight.w600,
+            ),
+          ),
+        )
             ],
           ),
         ),
