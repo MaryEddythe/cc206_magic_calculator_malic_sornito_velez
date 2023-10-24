@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:cc206_magic_calculator_malic_sornito_velez/features/home.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  //const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +13,9 @@ class MyApp extends StatelessWidget {
       title: 'Home',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.white,
+        primaryColor: Colors.white70,
       ),
-      home: Home(),
+      home: const Home(),
     );
   }
 }
