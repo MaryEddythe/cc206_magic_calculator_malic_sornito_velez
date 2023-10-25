@@ -12,27 +12,13 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<CategoryModel> categories = [];
-  List<ArticleModel> articles = [];
-  //bool _load = true;
+  List<CategoryModel> categories = <CategoryModel>[];
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     categories = getCategories();
-    getNews();
-  }
-
-  getNews() async {
-    News newsClass = News();
-    await newsClass.getNews();
-    articles = newsClass.news;
-    /*
-    setState(() {
-      _load = false;
-    });
-    */
   }
 
   @override
@@ -44,26 +30,16 @@ class _HomeState extends State<Home> {
           children: [
             Text(
               "Eddythorial",
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(color: Colors.white),
             ),
           ],
         ),
         centerTitle: true,
         elevation: 0.0,
       ),
-      body:
-          /*
-          _load
-          ? Center(
-              child: Container(
-                child: CircularProgressIndicator(),
-              ),
-            )
-          :*/
-          Container(
+      body: Container(
         child: Column(
-          children: [
-            /// Categories
+          children: <Widget>[
             Container(
               padding: EdgeInsets.symmetric(horizontal: 16),
               height: 70,
@@ -71,26 +47,13 @@ class _HomeState extends State<Home> {
                   itemCount: categories.length,
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
+                  itemBuilder: ((context, index) {
                     return CategoryTile(
                       imageUrl: categories[index].imageUrl,
                       categoryName: categories[index].categoryName,
                     );
-                  }),
+                  })),
             ),
-
-            /// Blogs
-            Container(
-              child: ListView.builder(
-                  itemCount: articles.length,
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) {
-                    return BlogTile(
-                        imageUrl: articles[index].urlToImage,
-                        title: articles[index].title,
-                        desc: articles[index].description);
-                  }),
-            )
           ],
         ),
       ),
@@ -99,8 +62,6 @@ class _HomeState extends State<Home> {
 }
 
 class CategoryTile extends StatelessWidget {
-  //const CategoryTile({super.key});
-
   final imageUrl, categoryName;
   CategoryTile({this.imageUrl, this.categoryName});
 
@@ -144,9 +105,11 @@ class CategoryTile extends StatelessWidget {
   }
 }
 
+/*
 class BlogTile extends StatelessWidget {
   //const BlogTile({super.key});
-  String imageUrl, title, desc;
+
+  final String imageUrl, title, desc;
   BlogTile({required this.imageUrl, required this.title, required this.desc});
 
   @override
@@ -160,3 +123,4 @@ class BlogTile extends StatelessWidget {
     );
   }
 }
+*/
