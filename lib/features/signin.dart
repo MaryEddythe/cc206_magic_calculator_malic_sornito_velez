@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cc206_magic_calculator_malic_sornito_velez/features/article.dart';
 
 class Signin extends StatelessWidget {
   const Signin({Key? key}) : super(key: key);
@@ -47,10 +48,13 @@ class Signin extends StatelessWidget {
                   ),
                 ),
               ),
+
+
+              
               SizedBox(height: 20),
               ElevatedButton(
               onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Header())); //next section working//
               },
               style: ElevatedButton.styleFrom(
               primary: Color(0xFFFF001747),
