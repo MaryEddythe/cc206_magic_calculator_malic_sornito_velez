@@ -143,33 +143,36 @@ class NewsArticlePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<NewsArticle> articles = [
-      NewsArticle(
-        imagePath: 'assets/images/news1.jpg',
-        mainText: 'UN: Will help Palestine, Israel resolve conflict',
-        subText: 'Published 2 hours ago',
-      ),
-      NewsArticle(
-        imagePath: 'assets/images/news2.jpg',
-        mainText: 'Israel Took Advantage of 9/11 to Wage War on Palestine | CNN News',
-        subText: 'Published 12 hours ago',
-      ),
-      NewsArticle(
-        imagePath: 'assets/images/news3.jpg',
-        mainText: 'Election results transmission starts | GMA News',
-        subText: 'Published 6 hours ago',
-      ),
-      NewsArticle(
-        imagePath: 'assets/images/news4.jpg',
-        mainText: 'October 30 declared a special non-working day for barangay, SK polls',
-        subText: 'Published 30 minutes ago',
-      ),
-      NewsArticle(
-        imagePath: 'assets/images/news5.jpg',
-        mainText: 'Filipinos flock to cemeteries ahead of Undas | ABS-CBN News',
-        subText: 'Published 5 minutes ago',
-      ),
-    ];
+  NewsArticle(
+    imagePath: 'assets/images/news1.jpg',
+    mainText: 'UN: Will help Palestine, Israel resolve conflict',
+    subText: 'Published 2 hours ago',
+  ),
+  NewsArticle(
+    imagePath: 'assets/images/news2.jpg',
+    mainText: 'Israel Took Advantage of 9/11 to Wage War on Palestine | CNN News',
+    subText: 'Published 12 hours ago',
+  ),
+  NewsArticle(
+    imagePath: 'assets/images/news3.jpg',
+    mainText: 'Election results transmission starts | GMA News',
+    subText: 'Published 6 hours ago',
+  ),
+  NewsArticle(
+    imagePath: 'assets/images/news4.jpg',
+    mainText: 'October 30 declared a special non-working day for barangay, SK polls',
+    subText: 'Published 30 minutes ago',
+  ),
+  NewsArticle(
+    imagePath: 'assets/images/news5.jpg',
+    mainText: 'Filipinos flock to cemeteries ahead of Undas | ABS-CBN News',
+    subText: 'Published 5 minutes ago',
+  ),
+];
 
+    
+    double containerWidth = MediaQuery.of(context).size.width * 0.96;
+    
     return Column(
       children: [
         CarouselSlider(
@@ -186,32 +189,35 @@ class NewsArticlePage extends StatelessWidget {
             );
           }).toList(),
         ),
-        SizedBox(height: 10),
-        Container(
-          height: 90,
-          color: Colors.black,
+        SizedBox(height: 30),
+         Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(
+            'Recent News',
+             style: GoogleFonts.lora(
+                  color: Color(0xFF001747), 
+                  fontSize: 20, 
+                  fontWeight: FontWeight.w800,
+                ),
+          ),
         ),
+        _buildRoundedContainer(containerWidth, 80, Colors.black),
         SizedBox(height: 10),
-        Container(
-          height: 90,
-          color: Colors.black,
-        ),
+        _buildRoundedContainer(containerWidth, 80, Colors.black),
         SizedBox(height: 10),
-        Container(
-          height: 90,
-          color: Colors.black,
-        ),
-        SizedBox(height: 10),
-        Container(
-          height: 90,
-          color: Colors.black,
-        ),
-        SizedBox(height: 10),
-        Container(
-          height: 90,
-          color: Colors.black,
-        ),
+        _buildRoundedContainer(containerWidth, 80, Colors.black),
       ],
+    );
+  }
+
+  Widget _buildRoundedContainer(double width, double height, Color color) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(10),
+      child: Container(
+        width: width,
+        height: height,
+        color: color,
+      ),
     );
   }
 }
