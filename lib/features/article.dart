@@ -42,13 +42,7 @@ class Header extends StatelessWidget {
               ),
               SizedBox(height: 10),
               NewsArticlePage(),
-              Expanded(
-                child: TabBarView(
-                  children: [
-                    
-                  ],
-                ),
-              ),
+              
             ],
           ),
           bottomNavigationBar: BottomNavigationBar(
@@ -173,7 +167,7 @@ class NewsArticlePage extends StatelessWidget {
     
     double containerWidth = MediaQuery.of(context).size.width * 0.96;
     
-    return Column(
+   return Column( // Use a Column to create a valid flex container
       children: [
         CarouselSlider(
           options: CarouselOptions(
@@ -190,15 +184,15 @@ class NewsArticlePage extends StatelessWidget {
           }).toList(),
         ),
         SizedBox(height: 30),
-         Padding(
+        Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Text(
             'Recent News',
-             style: GoogleFonts.lora(
-                  color: Color(0xFF001747), 
-                  fontSize: 20, 
-                  fontWeight: FontWeight.w800,
-                ),
+            style: GoogleFonts.lora(
+              color: Color(0xFF001747),
+              fontSize: 20,
+              fontWeight: FontWeight.w800,
+            ),
           ),
         ),
         _buildRoundedContainer(containerWidth, 80, Colors.black),
