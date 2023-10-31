@@ -32,17 +32,19 @@ class Header extends StatelessWidget {
           body: ListView(
             children: [
               SizedBox(height: 15),
-              Text(
-                'Breaking News',
-                style: GoogleFonts.lora(
-                  color: Color(0xFF001747), 
-                  fontSize: 30, 
-                  fontWeight: FontWeight.w800,
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0), // Add space on the left
+                child: Text(
+                  'Breaking News',
+                  style: GoogleFonts.lora(
+                    color: Color(0xFF001747),
+                    fontSize: 30,
+                    fontWeight: FontWeight.w800,
+                  ),
                 ),
               ),
               SizedBox(height: 10),
               NewsArticlePage(),
-              
             ],
           ),
           bottomNavigationBar: BottomNavigationBar(
@@ -69,6 +71,7 @@ class Header extends StatelessWidget {
     );
   }
 }
+
 
 class NewsArticle {
   final String imagePath;
