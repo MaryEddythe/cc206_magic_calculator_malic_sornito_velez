@@ -33,7 +33,7 @@ class Header extends StatelessWidget {
             children: [
               SizedBox(height: 15),
               Padding(
-                padding: const EdgeInsets.only(left: 16.0), // Add space on the left
+                padding: const EdgeInsets.only(left: 16.0), 
                 child: Text(
                   'Breaking News',
                   style: GoogleFonts.lora(
@@ -170,7 +170,7 @@ class NewsArticlePage extends StatelessWidget {
     
     double containerWidth = MediaQuery.of(context).size.width * 0.96;
     
-   return Column( // Use a Column to create a valid flex container
+   return Column( 
       children: [
         CarouselSlider(
           options: CarouselOptions(
