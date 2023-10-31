@@ -1,4 +1,5 @@
 import 'package:cc206_magic_calculator_malic_sornito_velez/features/article.dart';
+import 'package:cc206_magic_calculator_malic_sornito_velez/features/signin.dart';
 import 'package:flutter/material.dart';
 
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
-      home: Header(),
+      home: Signin(),
     );
   }
 }
