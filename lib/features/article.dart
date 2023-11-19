@@ -33,11 +33,12 @@ class Header extends StatelessWidget {
           body: ListView(
             children: [
               SizedBox(height: 15),
-              Padding(
-                padding: const EdgeInsets.only(left: 16.0), 
+              const Padding(
+                padding: EdgeInsets.only(left: 16.0),
                 child: Text(
                   'Breaking News',
-                  style: GoogleFonts.lora(
+                  style: TextStyle(
+                    fontFamily: 'Lora',
                     color: Color(0xFF001747),
                     fontSize: 30,
                     fontWeight: FontWeight.w800,
@@ -115,7 +116,8 @@ class NewsArticlePage extends StatelessWidget {
               children: [
                 Text(
                   mainText,
-                  style: GoogleFonts.lora(
+                  style: TextStyle(
+                    fontFamily: 'Lora',
                     color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -188,11 +190,12 @@ class NewsArticlePage extends StatelessWidget {
           }).toList(),
         ),
         SizedBox(height: 30),
-        Padding(
+        const Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Text(
             'Recent News',
-            style: GoogleFonts.lora(
+            style: TextStyle(
+              fontFamily: 'Lora',
               color: Color(0xFF001747),
               fontSize: 20,
               fontWeight: FontWeight.w800,
