@@ -5,8 +5,28 @@ import 'package:carousel_slider/carousel_slider.dart';
 void main() {
   runApp(const Header());
 }
-class Header extends StatelessWidget {
+
+class Header extends StatefulWidget {
   const Header({Key? key}) : super(key: key);
+
+  @override
+  _HeaderState createState() => _HeaderState();
+}
+
+class _HeaderState extends State<Header> {
+  int _currentIndex = 1;
+
+  final List<Widget> _pages = [
+    Home(),
+    NewsArticlePage(),
+
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,16 +67,37 @@ class Header extends StatelessWidget {
             SizedBox(height: 10),
             Container(
               color: Colors.white,
-              child: NewsArticlePage(),
+              child: _pages[_currentIndex],
             ),
           ],
         ),
+        bottomNavigationBar: buildBottomNavigationBar(context),
       ),
     );
   }
+
+  BottomNavigationBar buildBottomNavigationBar(BuildContext context) {
+    return BottomNavigationBar(
+      selectedItemColor: const Color(0xFF0D1333),
+      currentIndex: _currentIndex,
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home_filled),
+          label: 'Home',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.newspaper),
+          label: 'News',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.newspaper),
+          label: 'Profile',
+        ),
+      ],
+      onTap: _onItemTapped,
+    );
+  }
 }
-
-
 
 
 class NewsArticle {
