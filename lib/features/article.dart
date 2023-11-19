@@ -3,10 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 void main() {
-  runApp(Header());
+  runApp(const Header());
 }
 
 class Header extends StatelessWidget {
+  const Header({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -99,7 +101,7 @@ class NewsArticlePage extends StatelessWidget {
             width: double.infinity,
           ),
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -116,7 +118,7 @@ class NewsArticlePage extends StatelessWidget {
               children: [
                 Text(
                   mainText,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontFamily: 'Lora',
                     color: Colors.white,
                     fontSize: 18,
