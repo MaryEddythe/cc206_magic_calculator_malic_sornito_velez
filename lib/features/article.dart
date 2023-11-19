@@ -14,10 +14,11 @@ class Header extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            title: Text(
+            title: const Text(
               'edithor.ial',
-              style: GoogleFonts.lora(
+              style: TextStyle(
                 fontSize: 16,
+                fontFamily: 'Lora',
                 fontWeight: FontWeight.bold,
               ),
             ),
