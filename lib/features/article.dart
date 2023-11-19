@@ -91,7 +91,8 @@ class NewsArticle {
 class NewsArticlePage extends StatelessWidget {
   const NewsArticlePage({super.key});
 
-  Widget _buildRoundedImageWithGradient(String imagePath, String mainText, String subText) {
+  Widget _buildRoundedImageWithGradient(String imagePath, String mainText,
+      String subText) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: Stack(
@@ -147,37 +148,40 @@ class NewsArticlePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<NewsArticle> articles = [
-  NewsArticle(
-    imagePath: 'assets/images/news1.jpg',
-    mainText: 'UN: Will help Palestine, Israel resolve conflict',
-    subText: 'Published 2 hours ago',
-  ),
-  NewsArticle(
-    imagePath: 'assets/images/news2.jpg',
-    mainText: 'Israel Took Advantage of 9/11 to Wage War on Palestine | CNN News',
-    subText: 'Published 12 hours ago',
-  ),
-  NewsArticle(
-    imagePath: 'assets/images/news3.jpg',
-    mainText: 'Election results transmission starts | GMA News',
-    subText: 'Published 6 hours ago',
-  ),
-  NewsArticle(
-    imagePath: 'assets/images/news4.jpg',
-    mainText: 'October 30 declared a special non-working day for barangay, SK polls',
-    subText: 'Published 30 minutes ago',
-  ),
-  NewsArticle(
-    imagePath: 'assets/images/news5.jpg',
-    mainText: 'Filipinos flock to cemeteries ahead of Undas | ABS-CBN News',
-    subText: 'Published 5 minutes ago',
-  ),
-];
+      NewsArticle(
+        imagePath: 'assets/images/news1.jpg',
+        mainText: 'UN: Will help Palestine, Israel resolve conflict',
+        subText: 'Published 2 hours ago',
+      ),
+      NewsArticle(
+        imagePath: 'assets/images/news2.jpg',
+        mainText: 'Israel Took Advantage of 9/11 to Wage War on Palestine | CNN News',
+        subText: 'Published 12 hours ago',
+      ),
+      NewsArticle(
+        imagePath: 'assets/images/news3.jpg',
+        mainText: 'Election results transmission starts | GMA News',
+        subText: 'Published 6 hours ago',
+      ),
+      NewsArticle(
+        imagePath: 'assets/images/news4.jpg',
+        mainText: 'October 30 declared a special non-working day for barangay, SK polls',
+        subText: 'Published 30 minutes ago',
+      ),
+      NewsArticle(
+        imagePath: 'assets/images/news5.jpg',
+        mainText: 'Filipinos flock to cemeteries ahead of Undas | ABS-CBN News',
+        subText: 'Published 5 minutes ago',
+      ),
+    ];
 
-    
-    double containerWidth = MediaQuery.of(context).size.width * 0.96;
-    
-   return Column( 
+
+    double containerWidth = MediaQuery
+        .of(context)
+        .size
+        .width * 0.96;
+
+    return Column(
       children: [
         CarouselSlider(
           options: CarouselOptions(
@@ -189,7 +193,8 @@ class NewsArticlePage extends StatelessWidget {
           items: articles.map((article) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: _buildRoundedImageWithGradient(article.imagePath, article.mainText, article.subText),
+              child: _buildRoundedImageWithGradient(
+                  article.imagePath, article.mainText, article.subText),
             );
           }).toList(),
         ),
@@ -217,11 +222,14 @@ class NewsArticlePage extends StatelessWidget {
 
   Widget _buildRoundedContainer(double width, double height, Color color) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(10),
+      borderRadius: BorderRadius.circular(20),
       child: Container(
         width: width,
         height: height,
-        color: color,
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(20),
+        ),
       ),
     );
   }
