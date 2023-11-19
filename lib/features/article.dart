@@ -127,7 +127,8 @@ class NewsArticlePage extends StatelessWidget {
                 ),
                 Text(
                   subText,
-                  style: GoogleFonts.spaceMono(
+                  style: const TextStyle(
+                    fontFamily: 'SpaceMono',
                     color: Colors.white,
                     fontSize: 8,
                   ),
