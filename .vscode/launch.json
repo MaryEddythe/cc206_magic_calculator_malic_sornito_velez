@@ -8,20 +8,20 @@
             "name": "Flutter (Chrome)",
             "type": "dart",
             "request": "launch",
-            "program": "lib/main.dart"
+            "program": "lib/features/signin.dart"
         },
         {
             "name": "Chrome",
             "type": "dart",
             "request": "launch",
-            "program": "lib/main.dart",
+            "program": "lib/features/signin.dart",
             "flutterMode": "release"
         },
         {
             "name": "Flutter",
             "type": "dart",
             "request": "launch",
-            "program": "lib/main.dart",
+            "program": "lib/features/signin.dart",
             "flutterMode": "profile"
         },
       
