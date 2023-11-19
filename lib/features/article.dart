@@ -23,18 +23,18 @@ class Header extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            backgroundColor: Color(0xFF001747),
+            backgroundColor: const Color(0xFF001747),
             actions: [
               IconButton(
-                icon: Icon(Icons.notifications, size: 16),
+                icon: const Icon(Icons.notifications, size: 16),
                 onPressed: () {},
               ),
             ],
           ),
           body: ListView(
-            children: [
+            children: const [
               SizedBox(height: 15),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(left: 16.0),
                 child: Text(
                   'Breaking News',
@@ -51,10 +51,10 @@ class Header extends StatelessWidget {
             ],
           ),
           bottomNavigationBar: BottomNavigationBar(
-            unselectedItemColor: Color(0xFF808080),
-            selectedItemColor: Color(0xFF345AAD),
+            unselectedItemColor: const Color(0xFF808080),
+            selectedItemColor: const Color(0xFF345AAD),
             currentIndex: 1,
-            items: [
+            items: const [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
                 label: 'Home',
@@ -89,6 +89,8 @@ class NewsArticle {
 }
 
 class NewsArticlePage extends StatelessWidget {
+  const NewsArticlePage({super.key});
+
   Widget _buildRoundedImageWithGradient(String imagePath, String mainText, String subText) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
@@ -186,12 +188,12 @@ class NewsArticlePage extends StatelessWidget {
           ),
           items: articles.map((article) {
             return Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: _buildRoundedImageWithGradient(article.imagePath, article.mainText, article.subText),
             );
           }).toList(),
         ),
-        SizedBox(height: 30),
+        const SizedBox(height: 30),
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Text(
@@ -205,9 +207,9 @@ class NewsArticlePage extends StatelessWidget {
           ),
         ),
         _buildRoundedContainer(containerWidth, 80, Colors.black),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         _buildRoundedContainer(containerWidth, 80, Colors.black),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         _buildRoundedContainer(containerWidth, 80, Colors.black),
       ],
     );
