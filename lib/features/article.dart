@@ -1,79 +1,62 @@
+import 'package:cc206_magic_calculator_malic_sornito_velez/features/home.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 void main() {
   runApp(const Header());
 }
-
 class Header extends StatelessWidget {
-  const Header({super.key});
+  const Header({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: DefaultTabController(
-        length: 3,
-        child: Scaffold(
-          appBar: AppBar(
-            title: const Text(
-              'edithor.ial',
-              style: TextStyle(
-                fontSize: 16,
-                fontFamily: 'Lora',
-                fontWeight: FontWeight.bold,
-              ),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            'edithor.ial',
+            style: TextStyle(
+              fontSize: 16,
+              fontFamily: 'Lora',
+              fontWeight: FontWeight.bold,
             ),
-            backgroundColor: const Color(0xFF001747),
-            actions: [
-              IconButton(
-                icon: const Icon(Icons.notifications, size: 16),
-                onPressed: () {},
-              ),
-            ],
           ),
-          body: ListView(
-            children: const [
-              SizedBox(height: 15),
-              Padding(
-                padding: EdgeInsets.only(left: 16.0),
-                child: Text(
-                  'Breaking News',
-                  style: TextStyle(
-                    fontFamily: 'Lora',
-                    color: Color(0xFF001747),
-                    fontSize: 30,
-                    fontWeight: FontWeight.w800,
-                  ),
+          backgroundColor: const Color(0xFF001747),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.notifications, size: 16),
+              onPressed: () {},
+            ),
+          ],
+        ),
+        body: ListView(
+          children: [
+            SizedBox(height: 15),
+            const Padding(
+              padding: EdgeInsets.only(left: 16.0),
+              child: Text(
+                'Breaking News',
+                style: TextStyle(
+                  fontFamily: 'Lora',
+                  color: Color(0xFF001747),
+                  fontSize: 30,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              SizedBox(height: 10),
-              NewsArticlePage(),
-            ],
-          ),
-          bottomNavigationBar: BottomNavigationBar(
-            unselectedItemColor: const Color(0xFF808080),
-            selectedItemColor: const Color(0xFF345AAD),
-            currentIndex: 1,
-            items: const [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Home',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.newspaper),
-                label: 'Articles',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                label: 'Profile',
-              ),
-            ],
-          ),
+            ),
+            SizedBox(height: 10),
+            Container(
+              color: Colors.white,
+              child: NewsArticlePage(),
+            ),
+          ],
         ),
       ),
     );
   }
 }
+
+
 
 
 class NewsArticle {
