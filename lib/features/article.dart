@@ -90,7 +90,7 @@ class _HeaderState extends State<Header> {
           label: 'News',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.verified_user_rounded),
+          icon: Icon(Icons.supervised_user_circle_rounded),
           label: 'Profile',
         ),
       ],
