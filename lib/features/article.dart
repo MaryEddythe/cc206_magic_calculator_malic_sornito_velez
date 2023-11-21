@@ -28,15 +28,15 @@ class _HeaderState extends State<Header> {
       _currentIndex = index;
     });
     
-    // Handle navigation based on index
+    
     if (index == 0) {
-      // Navigate to Home page
+      
       Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
     } else if (index == 1) {
-      // Navigate to News page
+      
       Navigator.push(context, MaterialPageRoute(builder: (context) => NewsArticlePage()));
     } else if (index == 2) {
-      // Navigate to Profile page (Assuming Signin() is the profile page widget)
+      
       Navigator.push(context, MaterialPageRoute(builder: (context) => Signin()));
     }
   }
@@ -83,7 +83,7 @@ class _HeaderState extends State<Header> {
                 leading: Icon(Icons.home),
                 title: Text('Home'),
                 onTap: () {
-                  _onItemTapped(0); // Home page index
+                  _onItemTapped(0); 
                 },
               ),
               ListTile(
