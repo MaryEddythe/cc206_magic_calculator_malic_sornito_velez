@@ -19,13 +19,14 @@ class _HeaderState extends State<Header> {
   final List<Widget> _pages = [
     Home(),
     NewsArticlePage(),
-
+    // ProfilePage(), // Assuming you have a ProfilePage widget
   ];
 
   void _onItemTapped(int index) {
     setState(() {
       _currentIndex = index;
     });
+    Navigator.pop(context); // Close drawer after navigation
   }
 
   @override
@@ -48,6 +49,46 @@ class _HeaderState extends State<Header> {
               onPressed: () {},
             ),
           ],
+        ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child: Text(
+                  'Drawer Header',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Home'),
+                onTap: () {
+                  _onItemTapped(0); // Home page index
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.newspaper),
+                title: Text('News'),
+                onTap: () {
+                  _onItemTapped(1); // News page index
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.supervised_user_circle_rounded),
+                title: Text('Profile'),
+                onTap: () {
+                  _onItemTapped(2); // Profile page index
+                },
+              ),
+            ],
+          ),
         ),
         body: ListView(
           children: [
@@ -94,7 +135,7 @@ class _HeaderState extends State<Header> {
           label: 'Profile',
         ),
       ],
-      onTap: _onItemTapped,
+      onTap: _onItemTapped, // Add onTap to handle bottom navigation
     );
   }
 }
