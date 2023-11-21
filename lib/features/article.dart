@@ -1,4 +1,5 @@
 import 'package:cc206_magic_calculator_malic_sornito_velez/features/home.dart';
+import 'package:cc206_magic_calculator_malic_sornito_velez/features/signin.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -19,14 +20,25 @@ class _HeaderState extends State<Header> {
   final List<Widget> _pages = [
     Home(),
     NewsArticlePage(),
-    // ProfilePage(), // Assuming you have a ProfilePage widget
+    // ProfilePage(), 
   ];
 
   void _onItemTapped(int index) {
     setState(() {
       _currentIndex = index;
     });
-    Navigator.pop(context); // Close drawer after navigation
+    
+    // Handle navigation based on index
+    if (index == 0) {
+      // Navigate to Home page
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+    } else if (index == 1) {
+      // Navigate to News page
+      Navigator.push(context, MaterialPageRoute(builder: (context) => NewsArticlePage()));
+    } else if (index == 2) {
+      // Navigate to Profile page (Assuming Signin() is the profile page widget)
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Signin()));
+    }
   }
 
   @override
@@ -56,13 +68,14 @@ class _HeaderState extends State<Header> {
             children: <Widget>[
               DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Color(0xFF001747),
                 ),
                 child: Text(
-                  'Drawer Header',
+                  'Welcome, Mary!',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 24,
+                    fontFamily: 'Lora',
                   ),
                 ),
               ),
@@ -121,7 +134,8 @@ class _HeaderState extends State<Header> {
     return BottomNavigationBar(
       selectedItemColor: const Color(0xFF0D1333),
       currentIndex: _currentIndex,
-      items: const [
+      onTap: _onItemTapped, // Add onTap to handle bottom navigation
+      items: [
         BottomNavigationBarItem(
           icon: Icon(Icons.home_filled),
           label: 'Home',
@@ -135,10 +149,11 @@ class _HeaderState extends State<Header> {
           label: 'Profile',
         ),
       ],
-      onTap: _onItemTapped, // Add onTap to handle bottom navigation
     );
   }
 }
+
+
 
 
 class NewsArticle {
