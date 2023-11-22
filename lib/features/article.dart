@@ -1,3 +1,4 @@
+import 'package:cc206_magic_calculator_malic_sornito_velez/components/about.dart';
 import 'package:cc206_magic_calculator_malic_sornito_velez/features/home.dart';
 import 'package:cc206_magic_calculator_malic_sornito_velez/features/signin.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,7 @@ class _HeaderState extends State<Header> {
     
     if (index == 0) {
       
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => About()));
     } else if (index == 1) {
       
       Navigator.push(context, MaterialPageRoute(builder: (context) => NewsArticlePage()));
