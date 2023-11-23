@@ -75,6 +75,8 @@ flutter:
     - assets/images/recent4.jpg
     - assets/images/recent5.jpg
     - assets/images/logo.jpg
+    - assets/images/edith.png
+    - assets/images/idith.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
