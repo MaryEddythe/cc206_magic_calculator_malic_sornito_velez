@@ -1,5 +1,4 @@
 import 'package:cc206_magic_calculator_malic_sornito_velez/features/article.dart';
-import 'package:cc206_magic_calculator_malic_sornito_velez/features/home.dart';
 import 'package:flutter/material.dart';
 
 class Settings extends StatefulWidget {
@@ -24,9 +23,9 @@ class SettingsState extends State<Settings> {
           centerTitle: true,
           backgroundColor: const Color(0xFF001747),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => NewsArticlePage()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Header()));
             },
           ),
           actions: [

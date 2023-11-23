@@ -137,8 +137,8 @@ class _HeaderState extends State<Header> {
     return BottomNavigationBar(
       selectedItemColor: const Color(0xFF0D1333),
       currentIndex: _currentIndex,
-      onTap: _onItemTapped, // Add onTap to handle bottom navigation
-      items: [
+      onTap: _onItemTapped, 
+      items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home_filled),
           label: 'Home',

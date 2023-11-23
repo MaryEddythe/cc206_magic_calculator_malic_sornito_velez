@@ -7,7 +7,6 @@ class About extends StatefulWidget {
   @override
   State<About> createState() => AboutState();
 }
-
 class AboutState extends State<About> {
   @override
   Widget build(BuildContext context) {
@@ -15,7 +14,7 @@ class AboutState extends State<About> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text(
-            'edithor.ial',
+            'About us',
             style: TextStyle(
               fontSize: 16,
               fontFamily: 'Lora',
@@ -39,10 +38,11 @@ class AboutState extends State<About> {
         ),
         backgroundColor: Colors.white,
         body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               padding: const EdgeInsets.all(20.0),
+              alignment: Alignment.center,
               child: Image.asset(
                 'assets/images/logo.jpg', 
                 fit: BoxFit.contain,
@@ -50,21 +50,49 @@ class AboutState extends State<About> {
                 width: 175, 
               ),
             ),
-            const SizedBox(height: 20), // Add spacing between the image and text
-            Text(
-              'edithor.ial',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 16,
-                fontFamily: "Lora",
-                fontWeight: FontWeight.bold,
-              ),
+            const SizedBox(height: 5),
+            const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: double.infinity, 
+                  child: Center(
+                    child: Text(
+                      'The News Company Inc.',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: "Lora",
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 5), 
+                Padding(
+                  padding: EdgeInsets.only(left: 20.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Board of Directors',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: "Lora",
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
-            // Other widgets or text can go here
           ],
         ),
       ),
     );
   }
 }
+
+
+
 
