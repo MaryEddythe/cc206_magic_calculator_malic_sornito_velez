@@ -1,5 +1,5 @@
 import 'package:cc206_magic_calculator_malic_sornito_velez/components/about.dart';
-import 'package:cc206_magic_calculator_malic_sornito_velez/components/notif.dart';
+import 'package:cc206_magic_calculator_malic_sornito_velez/components/settings.dart';
 import 'package:cc206_magic_calculator_malic_sornito_velez/features/home.dart';
 import 'package:cc206_magic_calculator_malic_sornito_velez/features/signin.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +33,7 @@ class _HeaderState extends State<Header> {
     
     if (index == 0) {
       
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Notifications()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));
     } else if (index == 1) {
       
       Navigator.push(context, MaterialPageRoute(builder: (context) => About()));
@@ -83,8 +83,8 @@ class _HeaderState extends State<Header> {
                 ),
               ),
               ListTile(
-                leading: Icon(Icons.notifications_active),
-                title: Text('Notifications'),
+                leading: Icon(Icons.settings),
+                title: Text('Settings'),
                 onTap: () {
                   _onItemTapped(0); 
                 },

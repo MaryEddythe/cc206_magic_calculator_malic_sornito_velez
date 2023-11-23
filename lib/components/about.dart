@@ -8,8 +8,29 @@ class About extends StatefulWidget {
 }
 
 class AboutState extends State<About> {
-  @override
+   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            'edithor.ial',
+            style: TextStyle(
+              fontSize: 16,
+              fontFamily: 'Lora',
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          centerTitle: true,
+          backgroundColor: const Color(0xFF001747),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.notifications, size: 16),
+              onPressed: () {},
+            ),
+          ],
+        ),
+      )
+    );
   }
 }
