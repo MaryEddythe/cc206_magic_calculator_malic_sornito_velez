@@ -82,24 +82,24 @@ class _HeaderState extends State<Header> {
                 ),
               ),
               ListTile(
-                leading: Icon(Icons.home),
-                title: Text('Home'),
+                leading: Icon(Icons.notifications_active),
+                title: Text('Notifications'),
                 onTap: () {
                   _onItemTapped(0); 
                 },
               ),
               ListTile(
-                leading: Icon(Icons.newspaper),
-                title: Text('News'),
+                leading: Icon(Icons.info),
+                title: Text('About Us'),
                 onTap: () {
-                  _onItemTapped(1); // News page index
+                  _onItemTapped(1); 
                 },
               ),
               ListTile(
-                leading: Icon(Icons.supervised_user_circle_rounded),
-                title: Text('Profile'),
+                leading: Icon(Icons.exit_to_app),
+                title: Text('Logout'),
                 onTap: () {
-                  _onItemTapped(2); // Profile page index
+                  _onItemTapped(2); 
                 },
               ),
             ],
