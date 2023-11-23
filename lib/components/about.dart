@@ -7,6 +7,7 @@ class About extends StatefulWidget {
   @override
   State<About> createState() => AboutState();
 }
+
 class AboutState extends State<About> {
   @override
   Widget build(BuildContext context) {
@@ -51,11 +52,11 @@ class AboutState extends State<About> {
               ),
             ),
             const SizedBox(height: 5),
-            const Column(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  width: double.infinity, 
+                  width: double.infinity,
                   child: Center(
                     child: Text(
                       'The News Company Inc.',
@@ -67,9 +68,9 @@ class AboutState extends State<About> {
                     ),
                   ),
                 ),
-                SizedBox(height: 5), 
+                const SizedBox(height: 5), 
                 Padding(
-                  padding: EdgeInsets.only(left: 20.0),
+                  padding: const EdgeInsets.only(left: 20.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -79,6 +80,24 @@ class AboutState extends State<About> {
                           fontSize: 16,
                           fontFamily: "Lora",
                           fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                      const SizedBox(height: 10), 
+                      Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: Colors.black, // Border color
+                            width: 2, // Border width
+                          ),
+                        ),
+                        child: ClipOval(
+                          child: Image.asset(
+                            'assets/images/edith.png', 
+                            height: 96, // Adjust the size to account for border width
+                            width: 96, // Adjust the size to account for border width
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ],
@@ -92,6 +111,9 @@ class AboutState extends State<About> {
     );
   }
 }
+
+
+
 
 
 
