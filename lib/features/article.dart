@@ -56,6 +56,7 @@ class _HeaderState extends State<Header> {
               fontWeight: FontWeight.bold,
             ),
           ),
+          centerTitle: true,
           backgroundColor: const Color(0xFF001747),
           actions: [
             IconButton(
