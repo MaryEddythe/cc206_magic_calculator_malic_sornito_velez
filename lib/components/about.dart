@@ -1,3 +1,4 @@
+import 'package:cc206_magic_calculator_malic_sornito_velez/features/article.dart';
 import 'package:flutter/material.dart';
 
 class About extends StatefulWidget {
@@ -23,6 +24,12 @@ class AboutState extends State<About> {
           ),
           centerTitle: true,
           backgroundColor: const Color(0xFF001747),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => NewsArticlePage()));
+            },
+          ),
           actions: [
             IconButton(
               icon: const Icon(Icons.notifications, size: 16),
