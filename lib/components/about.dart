@@ -27,7 +27,7 @@ class AboutState extends State<About> {
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => NewsArticlePage()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const NewsArticlePage()));
             },
           ),
           actions: [
@@ -55,7 +55,7 @@ class AboutState extends State<About> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   width: double.infinity,
                   child: Center(
                     child: Text(

@@ -20,8 +20,8 @@ class _HeaderState extends State<Header> {
   int _currentIndex = 1;
 
   final List<Widget> _pages = [
-    Home(),
-    NewsArticlePage(),
+    const Home(),
+    const NewsArticlePage(),
     // ProfilePage(), 
   ];
 
@@ -36,10 +36,10 @@ class _HeaderState extends State<Header> {
       Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));
     } else if (index == 1) {
       
-      Navigator.push(context, MaterialPageRoute(builder: (context) => About()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const About()));
     } else if (index == 2) {
       
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Signin()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const Signin()));
     }
   }
 
@@ -69,7 +69,7 @@ class _HeaderState extends State<Header> {
           child: ListView(
             padding: EdgeInsets.zero,
             children: <Widget>[
-              DrawerHeader(
+              const DrawerHeader(
                 decoration: BoxDecoration(
                   color: Color(0xFF001747),
                 ),
@@ -83,22 +83,22 @@ class _HeaderState extends State<Header> {
                 ),
               ),
               ListTile(
-                leading: Icon(Icons.settings),
-                title: Text('Settings'),
+                leading: const Icon(Icons.settings),
+                title: const Text('Settings'),
                 onTap: () {
                   _onItemTapped(0); 
                 },
               ),
               ListTile(
-                leading: Icon(Icons.info),
-                title: Text('About Us'),
+                leading: const Icon(Icons.info),
+                title: const Text('About Us'),
                 onTap: () {
                   _onItemTapped(1); 
                 },
               ),
               ListTile(
-                leading: Icon(Icons.exit_to_app),
-                title: Text('Logout'),
+                leading: const Icon(Icons.exit_to_app),
+                title: const Text('Logout'),
                 onTap: () {
                   _onItemTapped(2); 
                 },
@@ -108,7 +108,7 @@ class _HeaderState extends State<Header> {
         ),
         body: ListView(
           children: [
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             const Padding(
               padding: EdgeInsets.only(left: 16.0),
               child: Text(
@@ -121,7 +121,7 @@ class _HeaderState extends State<Header> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Container(
               color: Colors.white,
               child: _pages[_currentIndex],
