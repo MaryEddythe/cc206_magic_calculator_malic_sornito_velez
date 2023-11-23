@@ -51,7 +51,6 @@ class AboutState extends State<About> {
                 width: 175, 
               ),
             ),
-            const SizedBox(height: 5),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -70,7 +69,7 @@ class AboutState extends State<About> {
                 ),
                 const SizedBox(height: 25), 
                 Padding(
-                  padding: const EdgeInsets.only(left: 20.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -83,62 +82,101 @@ class AboutState extends State<About> {
                         ),
                       ),
                       const SizedBox(height: 10), 
-                      Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(
-                            color: Colors.black, 
-                            width: 1, 
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.black, 
+                                    width: 1, 
+                                  ),
+                                ),
+                                child: ClipOval(
+                                  child: Image.asset(
+                                    'assets/images/edith.png', 
+                                    height: 75, 
+                                    width: 75, 
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(height: 10),
+                              const Text(
+                                'Alexander Malic',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: "Lora",
+                                  fontWeight: FontWeight.w200,
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                        child: ClipOval(
-                          child: Image.asset(
-                            'assets/images/edith.png', 
-                            height: 75, 
-                            width: 75, 
-                            fit: BoxFit.cover,
+                          Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.black, 
+                                    width: 1, 
+                                  ),
+                                ),
+                                child: ClipOval(
+                                  child: Image.asset(
+                                    'assets/images/edith.png', 
+                                    height: 75, 
+                                    width: 75, 
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(height: 10),
+                              const Text(
+                                'Mary Eddythe Sornito',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: "Lora",
+                                  fontWeight: FontWeight.w200,
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-
-
+                          Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.black, 
+                                    width: 1, 
+                                  ),
+                                ),
+                                child: ClipOval(
+                                  child: Image.asset(
+                                    'assets/images/kyle.jpg', 
+                                    height: 75, 
+                                    width: 75, 
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(height: 10),
+                              const Text(
+                                'Kyle G. Velez',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: "Lora",
+                                  fontWeight: FontWeight.w200,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                       Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(
-                            color: Colors.black, 
-                            width: 1, 
-                          ),
-                        ),
-                        child: ClipOval(
-                          child: Image.asset(
-                            'assets/images/edith.png', 
-                            height: 75, 
-                            width: 75, 
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-
-                       Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(
-                            color: Colors.black, 
-                            width: 1, 
-                          ),
-                        ),
-                        child: ClipOval(
-                          child: Image.asset(
-                            'assets/images/kyle.jpg', 
-                            height: 75, 
-                            width: 75, 
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-
-
                     ],
                   ),
                 ),
@@ -150,3 +188,4 @@ class AboutState extends State<About> {
     );
   }
 }
+
