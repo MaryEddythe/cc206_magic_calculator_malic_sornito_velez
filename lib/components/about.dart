@@ -68,13 +68,13 @@ class AboutState extends State<About> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 5), 
+                const SizedBox(height: 25), 
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Board of Directors',
                         style: TextStyle(
                           fontSize: 16,
@@ -87,19 +87,58 @@ class AboutState extends State<About> {
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           border: Border.all(
-                            color: Colors.black, // Border color
-                            width: 2, // Border width
+                            color: Colors.black, 
+                            width: 1, 
                           ),
                         ),
                         child: ClipOval(
                           child: Image.asset(
                             'assets/images/edith.png', 
-                            height: 96, // Adjust the size to account for border width
-                            width: 96, // Adjust the size to account for border width
+                            height: 75, 
+                            width: 75, 
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+
+
+                      ),
+                       Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: Colors.black, 
+                            width: 1, 
+                          ),
+                        ),
+                        child: ClipOval(
+                          child: Image.asset(
+                            'assets/images/edith.png', 
+                            height: 75, 
+                            width: 75, 
                             fit: BoxFit.cover,
                           ),
                         ),
                       ),
+
+                       Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: Colors.black, 
+                            width: 1, 
+                          ),
+                        ),
+                        child: ClipOval(
+                          child: Image.asset(
+                            'assets/images/kyle.jpg', 
+                            height: 75, 
+                            width: 75, 
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+
+
                     ],
                   ),
                 ),
@@ -111,10 +150,3 @@ class AboutState extends State<About> {
     );
   }
 }
-
-
-
-
-
-
-
