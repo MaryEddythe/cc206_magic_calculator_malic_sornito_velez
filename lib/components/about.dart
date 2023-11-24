@@ -24,12 +24,6 @@ class AboutState extends State<About> {
           ),
           centerTitle: true,
           backgroundColor: const Color(0xFF001747),
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const NewsArticlePage()));
-            },
-          ),
           actions: [
             IconButton(
               icon: const Icon(Icons.notifications, size: 16),
