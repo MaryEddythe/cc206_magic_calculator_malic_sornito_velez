@@ -19,9 +19,9 @@ class Header extends StatefulWidget {
 class _HeaderState extends State<Header> {
   int _currentIndex = 1;
 
-  final List<Widget> _pages = [
-    const Home(),
-    const NewsArticlePage(),
+  final List<Widget> _pages = const [
+    Home(),
+    NewsArticlePage(),
     // ProfilePage(), 
   ];
 
@@ -29,16 +29,12 @@ class _HeaderState extends State<Header> {
     setState(() {
       _currentIndex = index;
     });
-    
-    
+
     if (index == 0) {
-      
       Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));
     } else if (index == 1) {
-      
       Navigator.push(context, MaterialPageRoute(builder: (context) => const About()));
     } else if (index == 2) {
-      
       Navigator.push(context, MaterialPageRoute(builder: (context) => const Signin()));
     }
   }
@@ -128,16 +124,16 @@ class _HeaderState extends State<Header> {
             ),
           ],
         ),
-        bottomNavigationBar: buildBottomNavigationBar(context),
+        bottomNavigationBar: buildBottomNavigationBar(),
       ),
     );
   }
 
-  BottomNavigationBar buildBottomNavigationBar(BuildContext context) {
+  BottomNavigationBar buildBottomNavigationBar() {
     return BottomNavigationBar(
       selectedItemColor: const Color(0xFF0D1333),
       currentIndex: _currentIndex,
-      onTap: _onItemTapped, 
+      onTap: _onItemTapped,
       items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home_filled),
@@ -155,6 +151,7 @@ class _HeaderState extends State<Header> {
     );
   }
 }
+
 
 
 

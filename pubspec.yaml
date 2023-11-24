@@ -79,6 +79,9 @@ flutter:
     - assets/images/idith.jpg
     - assets/images/kyle.jpg
     - assets/images/malic.jpg
+    - assets/images/logo.png
+    - assets/images/the.png
+    - assets/images/sample.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
