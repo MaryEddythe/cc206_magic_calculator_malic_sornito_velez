@@ -97,7 +97,7 @@ class AboutState extends State<About> {
                                 ),
                                 child: ClipOval(
                                   child: Image.asset(
-                                    'assets/images/edith.png', 
+                                    'assets/images/malic.jpg', 
                                     height: 75, 
                                     width: 75, 
                                     fit: BoxFit.cover,
