@@ -22,12 +22,6 @@ class SettingsState extends State<Settings> {
           ),
           centerTitle: true,
           backgroundColor: const Color(0xFF001747),
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const Header()));
-            },
-          ),
           actions: [
             IconButton(
               icon: const Icon(Icons.notifications, size: 16),
@@ -35,20 +29,94 @@ class SettingsState extends State<Settings> {
             ),
           ],
         ),
-        body: SettingsContent(), 
+        body: Center(
+          child: const SettingsContent(),
+        ),
       ),
     );
   }
 }
 
-
 class SettingsContent extends StatelessWidget {
+  const SettingsContent({Key? key});
+
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text(
-        'Settings Content',
-        style: TextStyle(fontSize: 20),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              children: [
+                Icon(Icons.sunny),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    'Dark mode',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontFamily: "SpaceMono",
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 18),
+            Row(
+              children: [
+                Icon(Icons.verified_user_rounded),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    'Edit Profile',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontFamily: "SpaceMono",
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 18),
+            Row(
+              children: [
+                Icon(Icons.password),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    'Change Password',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontFamily: "SpaceMono",
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 18),
+            Row(
+              children: [
+                Icon(Icons.language),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    'Language',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontFamily: "SpaceMono",
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
