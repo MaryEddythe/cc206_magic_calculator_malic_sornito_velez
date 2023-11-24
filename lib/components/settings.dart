@@ -42,16 +42,16 @@ class SettingsContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Row(
               children: [
                 Icon(Icons.sunny),
-                const SizedBox(width: 12),
+                SizedBox(width: 12),
                 Expanded(
                   child: Text(
                     'Dark mode',
@@ -64,11 +64,11 @@ class SettingsContent extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 18),
+            SizedBox(height: 18),
             Row(
               children: [
                 Icon(Icons.verified_user_rounded),
-                const SizedBox(width: 12),
+                SizedBox(width: 12),
                 Expanded(
                   child: Text(
                     'Edit Profile',
@@ -81,11 +81,11 @@ class SettingsContent extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 18),
+            SizedBox(height: 18),
             Row(
               children: [
                 Icon(Icons.password),
-                const SizedBox(width: 12),
+                SizedBox(width: 12),
                 Expanded(
                   child: Text(
                     'Change Password',
@@ -98,11 +98,11 @@ class SettingsContent extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 18),
+            SizedBox(height: 18),
             Row(
               children: [
                 Icon(Icons.language),
-                const SizedBox(width: 12),
+                SizedBox(width: 12),
                 Expanded(
                   child: Text(
                     'Language',
