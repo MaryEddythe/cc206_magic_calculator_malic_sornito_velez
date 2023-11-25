@@ -111,6 +111,16 @@ flutter:
           - asset: fonts/SpaceMono-Italic.ttf
           - asset: fonts/SpaceMono-Regular.ttf
   #         weight: 700
+      - family: Poppins
+        fonts:
+          - asset: fonts/Poppins-Black.ttf
+          - asset: fonts/Poppins-Bold.ttf
+          - asset: fonts/Poppins-ExtraBold.ttf
+          - asset: fonts/Poppins-Light.ttf
+          - asset: fonts/Poppins-Medium.ttf
+          - asset: fonts/Poppins-Regular.ttf
+          - asset: fonts/Poppins-SemiBold.ttf
+  #         weight: 700
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
