@@ -11,7 +11,7 @@ Widget build(BuildContext context) {
     body: Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/sample.jpg'), 
+          image: AssetImage('assets/images/sample.png'), 
           fit: BoxFit.cover,
         ),
       ),
@@ -20,7 +20,6 @@ Widget build(BuildContext context) {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: 20),
             Container(
               width: 300,
               child: TextFormField(
@@ -61,7 +60,7 @@ Widget build(BuildContext context) {
               style: ElevatedButton.styleFrom(
                 primary: const Color(0xFFFF001747),
                 onPrimary: Colors.white,
-                padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 130),
+                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 130),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(0.0), 
                 ),
@@ -73,6 +72,36 @@ Widget build(BuildContext context) {
                   fontWeight: FontWeight.w600,
                 ),
               ),
+            ),
+            SizedBox(height: 10), 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                const Text(
+                  'Have no account?  ',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
+                    fontFamily: "SpaceMono",
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Header())); 
+                  },
+                  child: const Text(
+                    'REGISTER',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "SpaceMono",
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
