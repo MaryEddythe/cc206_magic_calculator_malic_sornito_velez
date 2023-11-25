@@ -1,3 +1,4 @@
+import 'package:cc206_magic_calculator_malic_sornito_velez/features/register.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cc206_magic_calculator_malic_sornito_velez/features/article.dart';
@@ -73,7 +74,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            SizedBox(height: 10), 
+            SizedBox(height: MediaQuery.of(context).size.height * 0.5), 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -81,22 +82,22 @@ Widget build(BuildContext context) {
                   'Have no account?  ',
                   style: TextStyle(
                     fontSize: 14,
-                    color: Colors.black,
-                    fontFamily: "SpaceMono",
-                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFFF001747),
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Header())); 
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Register())); 
                   },
                   child: const Text(
                     'REGISTER',
                     style: TextStyle(
                       fontSize: 14,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "SpaceMono",
+                      color: Color(0xFFFF001747),
+                      fontWeight: FontWeight.w600,
+                      fontFamily: "Poppins",
                       decoration: TextDecoration.underline,
                     ),
                   ),
