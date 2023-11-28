@@ -28,7 +28,7 @@ class Homescreen extends StatelessWidget {
             'Flutter Developer',
             style: TextStyle(
               fontSize: 16,
-              color: Colors.yellow,
+              color: Colors.black,
             ),
           ),
           SizedBox(height: 16),
