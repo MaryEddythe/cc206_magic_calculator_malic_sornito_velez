@@ -15,7 +15,7 @@ class Homescreen extends StatelessWidget {
           CircleAvatar(
             radius: 50,
           ),
-          SizedBox(height: 16),
+          SizedBox(height: 16), 
           Text(
             "John Dear",
             style: TextStyle(
