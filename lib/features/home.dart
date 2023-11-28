@@ -20,7 +20,7 @@ class Homescreen extends StatelessWidget {
             "John Dear",
             style: TextStyle(
               fontSize: 25,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.bold, 
             ),
           ),
           SizedBox(height: 8),
