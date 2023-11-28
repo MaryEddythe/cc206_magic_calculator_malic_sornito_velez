@@ -92,7 +92,7 @@ Widget build(BuildContext context) {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => Register())); 
                   },
                   child: const Text(
-                    'REGISTER',
+                    'REGISTER NOW',
                     style: TextStyle(
                       fontSize: 14,
                       color: Color(0xFFFF001747),
