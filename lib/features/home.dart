@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Homescreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile'), 
+        title: Text('Profile'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -14,8 +13,9 @@ class Homescreen extends StatelessWidget {
           SizedBox(height: 20),
           CircleAvatar(
             radius: 50,
+            backgroundColor: Colors.red, // Set the background color to red
           ),
-          SizedBox(height: 16), 
+          SizedBox(height: 16),
           Text(
             "John Dear",
             style: TextStyle(
