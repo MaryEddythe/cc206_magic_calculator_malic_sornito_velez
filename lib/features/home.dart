@@ -51,7 +51,7 @@ class Homescreen extends StatelessWidget {
             'Hello! This is John Dear, and I developed this Flutter application.',
             style: TextStyle(
               fontSize: 16,
-              color: Colors.black,
+              color: Colors.red,
             ),
           ),
         ],
