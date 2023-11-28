@@ -13,14 +13,14 @@ class Homescreen extends StatelessWidget {
           SizedBox(height: 20),
           CircleAvatar(
             radius: 50,
-            backgroundColor: Colors.red, // Set the background color to red
+            backgroundColor: Colors.red,
           ),
           SizedBox(height: 16),
           Text(
             "John Dear",
             style: TextStyle(
               fontSize: 25,
-              fontWeight: FontWeight.bold, 
+              fontWeight: FontWeight.bold,
             ),
           ),
           SizedBox(height: 8),
