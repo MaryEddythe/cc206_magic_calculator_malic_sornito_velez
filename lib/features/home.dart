@@ -32,7 +32,7 @@ class Homescreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: 16),
-          Row(
+          Row( 
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Icon(Icons.location_on, color: Colors.grey),
