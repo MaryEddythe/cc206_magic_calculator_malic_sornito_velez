@@ -6,7 +6,7 @@ class Homescreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile'),
+        title: Text('Profile'), 
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
