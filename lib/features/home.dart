@@ -47,19 +47,14 @@ class Homescreen extends StatelessWidget {
             ],
           ),
           SizedBox(height: 8),
-        ],
-      ),
-      // Move the text outside of the Column
-      bottomSheet: Container(
-        padding: EdgeInsets.all(16),
-        color: Colors.red,
-        child: Text(
-          'Hello! This is John Dear, and I developed this Flutter application.',
-          style: TextStyle(
-            fontSize: 16,
-            color: Colors.white,
+          Text(
+            'Hello! This is John Dear, and I developed this Flutter application.',
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.red,
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
