@@ -46,12 +46,12 @@ class Homescreen extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 8), // Add some space between the location text and the new text
+          SizedBox(height: 8),
           Text(
             'Hello! This is John Dear, and I developed this Flutter application.',
             style: TextStyle(
               fontSize: 16,
-              color: Colors.black, // You can change the color if needed
+              color: Colors.black,
             ),
           ),
         ],
