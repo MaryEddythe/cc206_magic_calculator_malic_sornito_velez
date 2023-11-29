@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:cc206_magic_calculator_malic_sornito_velez/redirections/soc_med.dart';
+import 'package:cc206_magic_calculator_malic_sornito_velez/redirections/settings.dart';
 
 class Homescreen extends StatelessWidget {
   @override
@@ -75,16 +77,24 @@ class Homescreen extends StatelessWidget {
             ),
             ListTile(
               title: Text('Social Medias'),
-              leading: Icon(Icons.public), // Icon for Social Medias
+              leading: Icon(Icons.public),
               onTap: () {
-                // Handle item 1 tap
+                Navigator.pop(context); // Close the drawer
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SocialMediaScreen()),
+                );
               },
             ),
             ListTile(
               title: Text('Settings'),
-              leading: Icon(Icons.settings), // Icon for Settings
+              leading: Icon(Icons.settings),
               onTap: () {
-                // Handle item 2 tap
+                Navigator.pop(context); // Close the drawer
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SettingsScreen()),
+                );
               },
             ),
             // Add more ListTiles for additional items
