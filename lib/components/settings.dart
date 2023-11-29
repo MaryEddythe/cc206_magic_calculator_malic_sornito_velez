@@ -29,8 +29,8 @@ class SettingsState extends State<Settings> {
             ),
           ],
         ),
-        body: Center(
-          child: const SettingsContent(),
+        body: const Center(
+          child: SettingsContent(),
         ),
       ),
     );
