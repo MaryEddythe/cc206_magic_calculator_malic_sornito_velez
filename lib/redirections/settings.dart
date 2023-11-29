@@ -40,7 +40,7 @@ class SettingsScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 8.0),
         child: Row(
           children: [
-            Icon(
+            Icon( 
               icon,
               size: 30,
               color: Colors.black,
