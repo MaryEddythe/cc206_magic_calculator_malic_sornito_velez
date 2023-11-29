@@ -56,6 +56,41 @@ class Homescreen extends StatelessWidget {
           ),
         ],
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color(0xFFDB2700),
+              ),
+              child: Text(
+                'Welcome, ALEXANDER',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontFamily: 'Montserrat',
+                ),
+              ),
+            ),
+            ListTile(
+              title: Text('Social Medias'),
+              leading: Icon(Icons.public), // Icon for Social Medias
+              onTap: () {
+                // Handle item 1 tap
+              },
+            ),
+            ListTile(
+              title: Text('Settings'),
+              leading: Icon(Icons.settings), // Icon for Settings
+              onTap: () {
+                // Handle item 2 tap
+              },
+            ),
+            // Add more ListTiles for additional items
+          ],
+        ),
+      ),
     );
   }
 }
