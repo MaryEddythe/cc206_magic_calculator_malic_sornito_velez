@@ -89,7 +89,7 @@ class Homescreen extends StatelessWidget {
             ListTile( 
               title: Text('Settings'),
               leading: Icon(Icons.settings),
-              onTap: () {
+              onTap: () { 
                 Navigator.pop(context); // Close the drawer
                 Navigator.push(
                   context,
