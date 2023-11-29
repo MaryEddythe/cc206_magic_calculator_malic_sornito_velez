@@ -70,7 +70,7 @@ class Homescreen extends StatelessWidget {
                 'Welcome, ALEXANDER',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 24,
+                  fontSize: 23,
                   fontFamily: 'Montserrat',
                 ),
               ),
