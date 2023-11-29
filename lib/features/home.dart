@@ -86,7 +86,7 @@ class Homescreen extends StatelessWidget {
                 );
               },
             ),
-            ListTile(
+            ListTile( 
               title: Text('Settings'),
               leading: Icon(Icons.settings),
               onTap: () {
