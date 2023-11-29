@@ -14,7 +14,7 @@ class SettingsScreen extends StatelessWidget {
           children: [
             buildSettingItem(
               label: 'Notifications',
-              icon: Icons.notifications, 
+              icon: Icons.notifications,
             ),
             buildSettingItem(
               label: 'Account',
