@@ -46,7 +46,7 @@ class SocialMediaScreen extends StatelessWidget {
               fontFamily: 'Montserrat',
             ),
           ),
-          SizedBox(height: 4),
+          SizedBox(height: 4), 
           Text(
             content,
             style: TextStyle(
