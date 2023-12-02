@@ -52,7 +52,7 @@ class SocialMediaScreen extends StatelessWidget {
             style: TextStyle(
               fontSize: 20,
               color: Colors.black,
-              fontFamily: 'Montserrat', 
+              fontFamily: 'Montserrat',
             ),
           ),
         ],
