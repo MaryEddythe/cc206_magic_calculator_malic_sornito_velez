@@ -50,7 +50,7 @@ class Homescreen extends StatelessWidget {
           ),
           SizedBox(height: 8),
           Text(
-            'Hello! This is John Dear, and I developed this Flutter application.',
+            'Hello! This is John Lesther, and I developed this Flutter application.',
             style: TextStyle(
               fontSize: 16,
               color: Colors.red,
