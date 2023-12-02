@@ -76,7 +76,7 @@ class Homescreen extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text('Social Medias'),
+              title: Text('Social Media'),
               leading: Icon(Icons.public),
               onTap: () {
                 Navigator.pop(context); // Close the drawer
