@@ -67,7 +67,7 @@ class Homescreen extends StatelessWidget {
                 color: Color(0xFFDB2700),
               ),
               child: Text(
-                'Welcome, ALEXANDER',
+                'Welcome, Lesther!',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 23,
