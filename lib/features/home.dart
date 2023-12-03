@@ -119,13 +119,19 @@ class _HomeState extends State<Home> {
         ),
       ),
       drawer: Drawer(
+        backgroundColor: Color(0xFF001747),
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Color(0xFF001747),
-              ),
+                image: DecorationImage(
+                    image: AssetImage('images/people.jpg'),
+                    fit: BoxFit.cover,
+                    colorFilter: ColorFilter.mode(
+                        Color.fromARGB(100, 0, 22, 71), BlendMode.darken),
+                ),
+              ),       
               child: Text(
                 'Welcome, Mary!',
                 style: TextStyle(
@@ -136,32 +142,56 @@ class _HomeState extends State<Home> {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.home_filled),
-              title: const Text('Home'),
+              leading: const Icon(Icons.home_work_outlined, color: Colors.white,),
+              title: Text(
+                'Home',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Lora',
+                ),
+              ),
               onTap: () {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => const Home()));
               },
             ),
             ListTile(
-              leading: const Icon(Icons.settings),
-              title: const Text('Settings'),
+              leading: const Icon(Icons.settings, color: Colors.white,),
+              title: const Text(
+                'Settings',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Lora',
+                ),
+              ),
               onTap: () {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => Settings()));
               },
             ),
             ListTile(
-              leading: const Icon(Icons.info),
-              title: const Text('About Us'),
+              leading: const Icon(Icons.info, color: Colors.white,),
+              title: const Text(
+                'About Us',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Lora',
+                ),
+              ),
               onTap: () {
                 Navigator.pushReplacement(
                     context, MaterialPageRoute(builder: (context) => About()));
               },
             ),
             ListTile(
-              leading: const Icon(Icons.exit_to_app),
-              title: const Text('Logout'),
+              leading: const Icon(Icons.logout_outlined, color: Colors.white,),
+              title: const Text(
+                'Logout',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Lora',
+                ),
+              ),
               onTap: () {
                 Navigator.pushReplacement(
                     context, MaterialPageRoute(builder: (context) => Signin()));
