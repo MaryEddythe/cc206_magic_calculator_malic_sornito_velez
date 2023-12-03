@@ -15,23 +15,23 @@ class _ArticleViewState extends State<ArticleView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Edithor.ial",
-                style: TextStyle(
-                    fontFamily: 'Lora',
-                    fontSize: 18,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
-              ),
-            ],
-          ),
-          centerTitle: true,
           backgroundColor: Color(0xFF001747),
           elevation: 0.0,
           iconTheme: IconThemeData(color: Colors.white),
+          title: Padding(
+            padding: EdgeInsets.only(right: 45.0),
+            child: Center(
+              child: Text(
+                "Edithor.ial Web View",
+                style: TextStyle(
+                  fontFamily: 'Lora',
+                  fontSize: 18,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
         ),
         body: Container(
           child: WebView(

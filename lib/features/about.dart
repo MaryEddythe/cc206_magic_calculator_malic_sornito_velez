@@ -228,10 +228,10 @@ class DeveloperID extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 100,
-          height: 100,
+          width: 80,
+          height: 80,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(50),
+            borderRadius: BorderRadius.circular(40),
             image: DecorationImage(
               image: AssetImage(imagePath),
               fit: BoxFit.cover,
@@ -242,7 +242,7 @@ class DeveloperID extends StatelessWidget {
         Text(
           name,
           style: TextStyle(
-              fontSize: 10, fontWeight: FontWeight.bold, color: Colors.black),
+              fontSize: 8, fontWeight: FontWeight.bold, color: Colors.black),
         ),
       ],
     );
