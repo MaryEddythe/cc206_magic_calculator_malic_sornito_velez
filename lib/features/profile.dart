@@ -4,6 +4,7 @@ import 'about.dart';
 import 'home.dart';
 import 'newshome.dart';
 import 'settings.dart';
+import 'sign_in.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});

@@ -3,6 +3,7 @@ import 'about.dart';
 import 'home.dart';
 import 'profile.dart';
 import 'settings.dart';
+import 'sign_in.dart';
 
 class NewsHome extends StatefulWidget {
   const NewsHome({super.key});

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'about.dart';
 import 'home.dart';
+import 'sign_in.dart';
 
 class Settings extends StatefulWidget {
   const Settings({super.key});
@@ -145,11 +146,7 @@ class SettingsPage extends StatelessWidget {
   Widget buildSettingsItem(String settingItem) {
     return ListTile(
       title: Text(settingItem),
-      onTap: () {
-      },
+      onTap: () {},
     );
   }
 }
-
-
-
