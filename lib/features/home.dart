@@ -12,7 +12,7 @@ class Homescreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 30),
+          SizedBox(height: 20),
           CircleAvatar(
             radius: 50,
             backgroundColor: Colors.red,
