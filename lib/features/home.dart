@@ -120,29 +120,34 @@ class _HomeState extends State<Home> {
       ),
       drawer: Drawer(
         backgroundColor: Color(0xFF001747),
-        child: ListView(
-          padding: EdgeInsets.zero,
+        child: Column(
           children: <Widget>[
-            const DrawerHeader(
+            DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('images/people.jpg'),
-                    fit: BoxFit.cover,
-                    colorFilter: ColorFilter.mode(
-                        Color.fromARGB(100, 0, 22, 71), BlendMode.darken),
+                  image: AssetImage('images/people.jpg'),
+                  fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(
+                    Color.fromARGB(100, 0, 22, 71),
+                    BlendMode.darken,
+                  ),
                 ),
-              ),       
-              child: Text(
-                'Welcome, Mary!',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                  fontFamily: 'Lora',
+              ),
+              child: FractionallySizedBox(
+                widthFactor:
+                    1.0, // Set the width factor to take the entire width
+                child: Text(
+                  'Welcome, Mary!',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontFamily: 'Lora',
+                  ),
                 ),
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.home_work_outlined, color: Colors.white,),
+              leading: Icon(Icons.home_work_outlined, color: Colors.white),
               title: Text(
                 'Home',
                 style: TextStyle(
@@ -151,13 +156,15 @@ class _HomeState extends State<Home> {
                 ),
               ),
               onTap: () {
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => const Home()));
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Home()),
+                );
               },
             ),
             ListTile(
-              leading: const Icon(Icons.settings, color: Colors.white,),
-              title: const Text(
+              leading: Icon(Icons.settings, color: Colors.white),
+              title: Text(
                 'Settings',
                 style: TextStyle(
                   color: Colors.white,
@@ -165,13 +172,15 @@ class _HomeState extends State<Home> {
                 ),
               ),
               onTap: () {
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => Settings()));
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => Settings()),
+                );
               },
             ),
             ListTile(
-              leading: const Icon(Icons.info, color: Colors.white,),
-              title: const Text(
+              leading: Icon(Icons.info, color: Colors.white),
+              title: Text(
                 'About Us',
                 style: TextStyle(
                   color: Colors.white,
@@ -180,12 +189,18 @@ class _HomeState extends State<Home> {
               ),
               onTap: () {
                 Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (context) => About()));
+                  context,
+                  MaterialPageRoute(builder: (context) => About()),
+                );
               },
             ),
+            Expanded(
+              // This will expand and push the logout tile to the bottom
+              child: Container(),
+            ),
             ListTile(
-              leading: const Icon(Icons.logout_outlined, color: Colors.white,),
-              title: const Text(
+              leading: Icon(Icons.logout_outlined, color: Colors.white),
+              title: Text(
                 'Logout',
                 style: TextStyle(
                   color: Colors.white,
@@ -194,7 +209,9 @@ class _HomeState extends State<Home> {
               ),
               onTap: () {
                 Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (context) => Signin()));
+                  context,
+                  MaterialPageRoute(builder: (context) => Signin()),
+                );
               },
             ),
           ],
