@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'about.dart';
 import 'home.dart';
+import 'newshome.dart';
 import 'settings.dart';
 
 class Profile extends StatefulWidget {
@@ -328,5 +329,3 @@ class _ProfileState extends State<Profile> {
     );
   }
 }
-
-
