@@ -11,7 +11,7 @@ class Signin extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/sample.png'),
+            image: AssetImage('images/sample.png'),
             fit: BoxFit.cover,
           ),
         ),
