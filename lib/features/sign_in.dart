@@ -9,7 +9,7 @@ class Signin extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/sample.png'), 
+            image: AssetImage('assets/images/sample.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -24,13 +24,9 @@ class Signin extends StatelessWidget {
                 child: TextFormField(
                   decoration: InputDecoration(
                     labelText: 'Username',
-                    labelStyle: GoogleFonts.poppins(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                    ),
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.person),
-                    contentPadding: EdgeInsets.symmetric(vertical: 5), 
+                    contentPadding: EdgeInsets.symmetric(vertical: 5),
                   ),
                 ),
               ),
@@ -41,38 +37,39 @@ class Signin extends StatelessWidget {
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Password',
-                    labelStyle: GoogleFonts.poppins(
+                    labelStyle: TextStyle(
+                      fontFamily: 'Poppins',
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
                     ),
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.lock),
-                    contentPadding: EdgeInsets.symmetric(vertical: 5), 
+                    contentPadding: EdgeInsets.symmetric(vertical: 5),
                   ),
                 ),
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Header())); 
-                },
+                onPressed: () {},
                 style: ElevatedButton.styleFrom(
                   primary: const Color(0xFFFF001747),
                   onPrimary: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 130),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 8, horizontal: 130),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0.0), 
+                    borderRadius: BorderRadius.circular(0.0),
                   ),
                 ),
                 child: Text(
                   'Login',
-                  style: GoogleFonts.poppins(
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.2), 
+              SizedBox(height: MediaQuery.of(context).size.height * 0.2),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -86,9 +83,7 @@ class Signin extends StatelessWidget {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Register())); 
-                    },
+                    onTap: () {},
                     child: const Text(
                       'REGISTER NOW ',
                       style: TextStyle(
@@ -109,4 +104,3 @@ class Signin extends StatelessWidget {
     );
   }
 }
-
