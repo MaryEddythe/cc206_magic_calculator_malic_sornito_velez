@@ -26,6 +26,11 @@ class Signin extends StatelessWidget {
                 child: TextFormField(
                   decoration: InputDecoration(
                     labelText: 'Username',
+                    labelStyle: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                    ),
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.person),
                     contentPadding: EdgeInsets.symmetric(vertical: 5),

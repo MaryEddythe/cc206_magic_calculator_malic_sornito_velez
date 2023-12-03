@@ -15,7 +15,7 @@ class _AboutState extends State<About> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF102E44),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -105,7 +105,7 @@ class _AboutState extends State<About> {
                   ),
                 ],
                 image: DecorationImage(
-                  image: AssetImage('images/logo.png'),
+                  image: AssetImage('images/edithorial-logo1.png'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -119,7 +119,7 @@ class _AboutState extends State<About> {
                 style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
-                    color: Colors.white),
+                    color: Colors.black),
                 softWrap: true,
               ),
             ),
@@ -129,7 +129,7 @@ class _AboutState extends State<About> {
               style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white),
+                  color: Colors.black),
             ),
             SizedBox(height: 20),
             Row(
@@ -185,7 +185,7 @@ class DeveloperID extends StatelessWidget {
         Text(
           name,
           style: TextStyle(
-              fontSize: 8, fontWeight: FontWeight.bold, color: Colors.white),
+              fontSize: 10, fontWeight: FontWeight.bold, color: Colors.black),
         ),
       ],
     );
