@@ -84,6 +84,7 @@ flutter:
         - asset: assets/fonts/Lora-VariableFont_wght.ttf
         - asset: assets/fonts/Lora-Italic-VariableFont_wght.ttf
           style: italic
+  #         weight: 700
     - family: SpaceMono
         fonts:
           - asset: fonts/SpaceMono-Bold.ttf
