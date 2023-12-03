@@ -107,16 +107,25 @@ class _HomeState extends State<Home> {
         iconTheme: IconThemeData(color: Colors.white),
         title: Padding(
           padding: EdgeInsets.only(right: 30.0),
-          child: Center(
-            child: Text(
-              "Edithor.ial",
-              style: TextStyle(
-                fontFamily: 'Lora',
-                fontSize: 18,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'images/edithorial-logo3.png', 
+                height: 35, 
+                width: 35,
               ),
-            ),
+              SizedBox(width: 8), 
+              Text(
+                "Edithor.ial",
+                style: TextStyle(
+                  fontFamily: 'Lora',
+                  fontSize: 18,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -140,7 +149,7 @@ class _HomeState extends State<Home> {
                   CircleAvatar(
                     radius: 30,
                     backgroundImage: AssetImage(
-                        'images/dev2.png'), // Replace with your profile image
+                        'images/dev2.png'),
                   ),
                   SizedBox(width: 20),
                   Text(
@@ -156,6 +165,7 @@ class _HomeState extends State<Home> {
             ),
             ListTile(
               leading: Icon(Icons.home_work_outlined, color: Colors.white),
+              hoverColor: Color.fromARGB(200, 0, 22, 71),
               title: Text(
                 'Home',
                 style: TextStyle(
@@ -172,6 +182,7 @@ class _HomeState extends State<Home> {
             ),
             ListTile(
               leading: Icon(Icons.settings, color: Colors.white),
+              hoverColor: Color.fromARGB(200, 0, 22, 71),
               title: Text(
                 'Settings',
                 style: TextStyle(
@@ -188,6 +199,7 @@ class _HomeState extends State<Home> {
             ),
             ListTile(
               leading: Icon(Icons.info, color: Colors.white),
+              hoverColor: Color.fromARGB(200, 0, 22, 71),
               title: Text(
                 'About Us',
                 style: TextStyle(
@@ -203,11 +215,11 @@ class _HomeState extends State<Home> {
               },
             ),
             Expanded(
-              // This will expand and push the logout tile to the bottom
               child: Container(),
             ),
             ListTile(
               leading: Icon(Icons.logout_outlined, color: Colors.white),
+              tileColor: Color.fromARGB(255, 0, 15, 50),
               title: Text(
                 'Logout',
                 style: TextStyle(
