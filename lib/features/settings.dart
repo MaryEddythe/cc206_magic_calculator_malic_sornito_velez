@@ -16,23 +16,23 @@ class _SettingsState extends State<Settings> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "Settings",
-              style: TextStyle(
-                  fontFamily: 'Lora',
-                  fontSize: 18,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold),
-            ),
-          ],
-        ),
-        centerTitle: true,
         backgroundColor: Color(0xFF001747),
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.white),
+        title: Padding(
+          padding: EdgeInsets.only(right: 45.0),
+          child: Center(
+            child: Text(
+              "Settings",
+              style: TextStyle(
+                fontFamily: 'Lora',
+                fontSize: 18,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
       ),
      drawer: Drawer(
         backgroundColor: Color(0xFF001747),
@@ -155,6 +155,7 @@ class SettingsPage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: ListView(
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
           children: [
             buildSettingsCategory('Account', [
               buildSettingsItem('Edit Profile'),
@@ -190,10 +191,16 @@ class SettingsPage extends StatelessWidget {
             ),
           ),
         ),
-        Divider(),
-        Column(
-          children: items,
+        Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey.shade300),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Column(
+            children: items,
+          ),
         ),
+        SizedBox(height: 16),
       ],
     );
   }
@@ -201,6 +208,7 @@ class SettingsPage extends StatelessWidget {
   Widget buildSettingsItem(String settingItem) {
     return ListTile(
       title: Text(settingItem),
+      trailing: Icon(Icons.arrow_right_outlined, color: Colors.black),
       onTap: () {},
     );
   }

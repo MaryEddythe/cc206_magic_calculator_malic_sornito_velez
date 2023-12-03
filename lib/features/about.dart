@@ -17,25 +17,25 @@ class _AboutState extends State<About> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "About Us",
-              style: TextStyle(
-                  fontFamily: 'Lora',
-                  fontSize: 18,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold),
-            ),
-          ],
-        ),
-        centerTitle: true,
         backgroundColor: Color(0xFF001747),
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.white),
+        title: Padding(
+          padding: EdgeInsets.only(right: 45.0),
+          child: Center(
+            child: Text(
+              "About Us",
+              style: TextStyle(
+                fontFamily: 'Lora',
+                fontSize: 18,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
       ),
-drawer: Drawer(
+      drawer: Drawer(
         backgroundColor: Color(0xFF001747),
         child: Column(
           children: <Widget>[
@@ -143,48 +143,18 @@ drawer: Drawer(
         ),
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.all(20),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(height: 20),
-            Container(
-              width: 350,
-              height: 280,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black54,
-                    spreadRadius: 0.1,
-                    blurRadius: 1,
-                  ),
-                ],
-                image: DecorationImage(
-                  image: AssetImage('images/edithorial-logo1.png'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            SizedBox(height: 15),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Text(
-                'Edithor.ial is your trusted companion in staying informed. As a reliable news application, we are committed to delivering accurate, up-to-date news from around the world. With a focus on credibility and trustworthiness, we curate diverse news stories, offering a comprehensive view of current events, politics, technology, entertainment, and more. Our platform ensures that users receive factual information, empowering them to make informed decisions and stay updated in an ever-evolving world.',
-                textAlign: TextAlign.justify,
-                style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black),
-                softWrap: true,
-              ),
-            ),
-            SizedBox(height: 30),
             Text(
               "Developers",
+              textAlign: TextAlign.center,
               style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black),
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
             ),
             SizedBox(height: 20),
             Row(
@@ -204,7 +174,39 @@ drawer: Drawer(
                 ),
               ],
             ),
+            SizedBox(height: 30),
+            Container(
+              height: 200,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                  image: AssetImage('images/edithorial-logo1.png'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
             SizedBox(height: 20),
+            Text(
+              'Your trusted companion in staying informed.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.black,
+              ),
+            ),
+            SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                'As a reliable news application, we are committed to delivering accurate, up-to-date news from around the world. With a focus on credibility and trustworthiness, we curate diverse news stories, offering a comprehensive view of current events, politics, technology, entertainment, and more. Our platform ensures that users receive factual information, empowering them to make informed decisions and stay updated in an ever-evolving world.',
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
+                ),
+              ),
+            ),
           ],
         ),
       ),
