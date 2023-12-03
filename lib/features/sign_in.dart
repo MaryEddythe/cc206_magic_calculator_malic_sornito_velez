@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home.dart';
+
 class Signin extends StatelessWidget {
   const Signin({Key? key}) : super(key: key);
 
@@ -50,7 +52,10 @@ class Signin extends StatelessWidget {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                      context, MaterialPageRoute(builder: (context) => Home()));
+                },
                 style: ElevatedButton.styleFrom(
                   primary: const Color(0xFFFF001747),
                   onPrimary: Colors.white,
