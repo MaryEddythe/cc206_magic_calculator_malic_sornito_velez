@@ -69,7 +69,6 @@ class _ProfileState extends State<Profile> {
             offset: Offset(0, 1),
           ),
         ],
-        border: Border.all(color: Colors.black54, width: 1.0),
       ),
       padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       margin: EdgeInsets.all(3.0),
@@ -255,17 +254,17 @@ class _ProfileState extends State<Profile> {
                         _buildInterestCard(
                             iconData: Icons.computer,
                             label: 'Tech',
-                            bgColor: Color.fromARGB(0, 0, 21, 21)),
+                            bgColor: Color.fromRGBO(255, 255, 255, 100)),
                         _buildInterestCard(
                             imageUrl:
                                 "https://st3.depositphotos.com/1071909/19574/i/450/depositphotos_195745476-stock-photo-artificial-intelligence-ai.jpg",
                             label: 'AI',
-                            bgColor: Color.fromARGB(0, 0, 21, 21)),
+                            bgColor: Color.fromRGBO(255, 255, 255, 100)),
                         _buildInterestCard(
                             imageUrl:
                                 'https://static4.depositphotos.com/1000507/360/i/600/depositphotos_3606155-stock-photo-multi-coloured-wardrobe-showcase-closeup.jpg',
                             label: 'Fashion',
-                            bgColor: Color.fromARGB(0, 0, 21, 21)),
+                            bgColor: Color.fromRGBO(255, 255, 255, 100))
                       ],
                     ),
                   ],
