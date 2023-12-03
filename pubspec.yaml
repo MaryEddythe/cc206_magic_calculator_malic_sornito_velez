@@ -91,6 +91,14 @@ flutter:
         - asset: fonts/SpaceMono-BoldItalic.ttf
         - asset: fonts/SpaceMono-Italic.ttf
         - asset: fonts/SpaceMono-Regular.ttf
-          
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins-Black.ttf
+        - asset: fonts/Poppins-Bold.ttf
+        - asset: fonts/Poppins-ExtraBold.ttf
+        - asset: fonts/Poppins-Light.ttf
+        - asset: fonts/Poppins-Medium.ttf
+        - asset: fonts/Poppins-Regular.ttf
+        - asset: fonts/Poppins-SemiBold.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
