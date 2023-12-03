@@ -75,12 +75,14 @@ class _HomeState extends State<Home> {
 
   BottomNavigationBar buildBottomNavigationBar(BuildContext context) {
     return BottomNavigationBar(
-      selectedItemColor: const Color(0xFF0D1333),
+      selectedItemColor: const Color(0xFFFFFFFF),
+      backgroundColor: const Color(0xFF0D1333),
+      unselectedItemColor: const Color(0xFF8A8A8A),
       currentIndex: botNavBarOption,
       onTap: botNavBarTap,
       items: const [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home_filled),
+          icon: Icon(Icons.home_work_outlined),
           label: 'Home',
         ),
         BottomNavigationBarItem(
@@ -88,7 +90,7 @@ class _HomeState extends State<Home> {
           label: 'Newsstand',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.person),
+          icon: Icon(Icons.face_outlined),
           label: 'Profile',
         ),
       ],
@@ -104,7 +106,7 @@ class _HomeState extends State<Home> {
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.white),
         title: Padding(
-          padding: EdgeInsets.only(right: 45.0),
+          padding: EdgeInsets.only(right: 30.0),
           child: Center(
             child: Text(
               "Edithor.ial",
@@ -133,17 +135,23 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              child: FractionallySizedBox(
-                widthFactor:
-                    1.0, // Set the width factor to take the entire width
-                child: Text(
-                  'Welcome, Mary!',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontFamily: 'Lora',
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage(
+                        'images/dev2.png'), // Replace with your profile image
                   ),
-                ),
+                  SizedBox(width: 20),
+                  Text(
+                    'Welcome, Mary!',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontFamily: 'Lora',
+                    ),
+                  ),
+                ],
               ),
             ),
             ListTile(
