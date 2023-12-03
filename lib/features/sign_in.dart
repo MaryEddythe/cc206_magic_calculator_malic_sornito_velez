@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'home.dart';
+import 'register.dart';
 
 class Signin extends StatelessWidget {
   const Signin({Key? key}) : super(key: key);
@@ -93,7 +94,10 @@ class Signin extends StatelessWidget {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => Register()));
+                    },
                     child: const Text(
                       'REGISTER NOW ',
                       style: TextStyle(

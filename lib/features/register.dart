@@ -40,17 +40,7 @@ class RegisterContent extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Create Account',
-          style: TextStyle(
-            fontSize: 20,
-            color: Color(0xFFFF001747),
-            fontFamily: "Poppins",
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ],
+      children: [],
     );
   }
 }
