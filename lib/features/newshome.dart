@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import '../features/about.dart';
 import '../features/home.dart';
-import '../features/profile.dart';
-import '../features/settings.dart';
-import '../features/sign_in.dart';
 
 class NewsHome extends StatefulWidget {
   const NewsHome({super.key});
