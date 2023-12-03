@@ -14,6 +14,7 @@ import 'article_view.dart';
 import 'category_news.dart';
 import 'newshome.dart';
 import 'profile.dart';
+import 'settings.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -137,7 +138,7 @@ class _HomeState extends State<Home> {
               title: const Text('Home'),
               onTap: () {
                 Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (context) => Home()));
+                    context, MaterialPageRoute(builder: (context) => const Home()));
               },
             ),
             ListTile(
