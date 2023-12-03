@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'home.dart';
+import 'settings.dart';
+
 class About extends StatefulWidget {
   const About({super.key});
 

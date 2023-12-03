@@ -9,6 +9,7 @@ import '../models/slider_model.dart';
 import '../services/data.dart';
 import '../services/news.dart';
 import '../services/slider_data.dart';
+import 'about.dart';
 import 'all_news.dart';
 import 'article_view.dart';
 import 'category_news.dart';
