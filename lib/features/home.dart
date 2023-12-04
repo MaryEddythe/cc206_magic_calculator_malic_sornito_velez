@@ -111,7 +111,7 @@ class _HomeState extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'images/edithorial-logo3.png', 
+                'assets/images/edithorial-logo3.png', 
                 height: 35, 
                 width: 35,
               ),
@@ -136,7 +136,7 @@ class _HomeState extends State<Home> {
             DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('images/people.jpg'),
+                  image: AssetImage('assets/images/people.jpg'),
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(
                     Color.fromARGB(100, 0, 22, 71),
@@ -149,7 +149,7 @@ class _HomeState extends State<Home> {
                   CircleAvatar(
                     radius: 30,
                     backgroundImage: AssetImage(
-                        'images/dev2.png'),
+                        'assets/images/dev2.png'),
                   ),
                   SizedBox(width: 20),
                   Text(

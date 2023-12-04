@@ -15,7 +15,7 @@ class RegisterState extends State<Register> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/sample.png'),
+            image: AssetImage('assets/images/sample.png'),
             fit: BoxFit.cover,
           ),
         ),

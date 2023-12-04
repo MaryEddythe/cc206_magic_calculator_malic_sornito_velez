@@ -41,7 +41,7 @@ class _SettingsState extends State<Settings> {
             DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('images/people.jpg'),
+                  image: AssetImage('assets/images/people.jpg'),
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(
                     Color.fromARGB(100, 0, 22, 71),
@@ -53,7 +53,7 @@ class _SettingsState extends State<Settings> {
                 children: [
                   CircleAvatar(
                     radius: 30,
-                    backgroundImage: AssetImage('images/dev2.png'),
+                    backgroundImage: AssetImage('assets/images/dev2.png'),
                   ),
                   SizedBox(width: 20),
                   Text(

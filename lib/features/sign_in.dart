@@ -1,5 +1,3 @@
-// ignore_for_file: use_full_hex_values_for_flutter_colors
-
 import 'package:flutter/material.dart';
 
 import 'home.dart';
@@ -23,12 +21,12 @@ class Signin extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              const SizedBox(height: 300),
+              SizedBox(height: 300),
               Container(
                 width: 300,
                 child: TextFormField(
-                  decoration: const InputDecoration(
-                    labelText: 'Email',
+                  decoration: InputDecoration(
+                    labelText: 'Username',
                     labelStyle: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 15,
@@ -40,12 +38,12 @@ class Signin extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
               Container(
                 width: 300,
                 child: TextFormField(
                   obscureText: true,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     labelText: 'Password',
                     labelStyle: TextStyle(
                       fontFamily: 'Poppins',
@@ -58,22 +56,22 @@ class Signin extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => const Home()));
+                  Navigator.pushReplacement(
+                      context, MaterialPageRoute(builder: (context) => Home()));
                 },
                 style: ElevatedButton.styleFrom(
-                  foregroundColor: Colors.white,
-                  backgroundColor: const Color(0xffff001747),
+                  primary: const Color(0xFFFF001747),
+                  onPrimary: Colors.white,
                   padding:
                       const EdgeInsets.symmetric(vertical: 8, horizontal: 130),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(0.0),
                   ),
                 ),
-                child: const Text(
+                child: Text(
                   'Login',
                   style: TextStyle(
                     fontFamily: 'Poppins',
@@ -87,26 +85,24 @@ class Signin extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   const Text(
-                    'Don\'t have an account yet?  ',
+                    'Have no account?  ',
                     style: TextStyle(
                       fontSize: 14,
-                      color: Color(0xffff001747),
+                      color: Color(0xFFFF001747),
                       fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Register()));
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => Register()));
                     },
                     child: const Text(
-                      'REGISTER NOW',
+                      'REGISTER NOW ',
                       style: TextStyle(
                         fontSize: 14,
-                        color: Color(0xffff001747),
+                        color: Color(0xFFFF001747),
                         fontWeight: FontWeight.w600,
                         fontFamily: "Poppins",
                         decoration: TextDecoration.underline,

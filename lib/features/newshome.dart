@@ -151,7 +151,7 @@ class _NewsHomeState extends State<NewsHome> {
             DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('images/people.jpg'),
+                  image: AssetImage('assets/images/people.jpg'),
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(
                     Color.fromARGB(100, 0, 22, 71),
@@ -163,7 +163,7 @@ class _NewsHomeState extends State<NewsHome> {
                 children: [
                   CircleAvatar(
                     radius: 30,
-                    backgroundImage: AssetImage('images/dev2.png'),
+                    backgroundImage: AssetImage('assets/images/dev2.png'),
                   ),
                   SizedBox(width: 20),
                   Text(
@@ -281,30 +281,30 @@ class _NewsHomeState extends State<NewsHome> {
               padding: EdgeInsets.all(12),
               children: [
                 _buildGenreWidget('Science and Technology', [
-                  _buildSourceWidget('Recombu', 'images/recombu-t.png'),
-                  _buildSourceWidget('PhoneRadar', 'images/phoneradar-t.jpg'),
-                  _buildSourceWidget('GameByte', 'images/gamebyte-t.png'),
+                  _buildSourceWidget('Recombu', 'assets/images/recombu-t.png'),
+                  _buildSourceWidget('PhoneRadar', 'assets/images/phoneradar-t.jpg'),
+                  _buildSourceWidget('GameByte', 'assets/images/gamebyte-t.png'),
                   _buildSuggestionIndicator(),
-                  _buildSourceWidget('New Scientist', 'images/ns-t.jpg'),
-                  _buildSourceWidget('ChannelBiz', 'images/channelbiz-t.png'),
+                  _buildSourceWidget('New Scientist', 'assets/images/ns-t.jpg'),
+                  _buildSourceWidget('ChannelBiz', 'assets/images/channelbiz-t.png'),
                 ]),
                 _buildGenreWidget('Entertainment', [
                   _buildSuggestionIndicator(),
-                  _buildSourceWidget('Ok! Magazine', 'images/ok-e.jpg'),
-                  _buildSourceWidget('RadioTimes', 'images/radiotimes-e.png'),
-                  _buildSourceWidget('Student Problems', 'images/sp-e.jpg'),
-                  _buildSourceWidget('NME', 'images/nme-e.png'),
-                  _buildSourceWidget('Funny Vines', 'images/fv-e.jpg'),
+                  _buildSourceWidget('Ok! Magazine', 'assets/images/ok-e.jpg'),
+                  _buildSourceWidget('RadioTimes', 'assets/images/radiotimes-e.png'),
+                  _buildSourceWidget('Student Problems', 'assets/images/sp-e.jpg'),
+                  _buildSourceWidget('NME', 'assets/images/nme-e.png'),
+                  _buildSourceWidget('Funny Vines', 'assets/images/fv-e.jpg'),
                 ]),
                 _buildGenreWidget('Health and Fitness', [
                   _buildSourceWidget(
-                      'Fehresian\nEnergetics', 'images/fehr-h.jpg'),
+                      'Fehresian\nEnergetics', 'assets/images/fehr-h.jpg'),
                   _buildSuggestionIndicator(),
-                  _buildSourceWidget('Healthhunt', 'images/healthhunt-h.jpg'),
-                  _buildSourceWidget('Nursing Times', 'images/nt-h.png'),
+                  _buildSourceWidget('Healthhunt', 'assets/images/healthhunt-h.jpg'),
+                  _buildSourceWidget('Nursing Times', 'assets/images/nt-h.png'),
                   _buildSourceWidget(
-                      'Pharmaceutical\nTechnology', 'images/phartech-h.jpg'),
-                  _buildSourceWidget('TheMindClan', 'images/themindclan-h.jpg'),
+                      'Pharmaceutical\nTechnology', 'assets/images/phartech-h.jpg'),
+                  _buildSourceWidget('TheMindClan', 'assets/images/themindclan-h.jpg'),
                 ]),
               ],
             ),

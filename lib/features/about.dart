@@ -42,7 +42,7 @@ class _AboutState extends State<About> {
             DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('images/people.jpg'),
+                  image: AssetImage('assets/images/people.jpg'),
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(
                     Color.fromARGB(100, 0, 22, 71),
@@ -54,7 +54,7 @@ class _AboutState extends State<About> {
                 children: [
                   CircleAvatar(
                     radius: 30,
-                    backgroundImage: AssetImage('images/dev2.png'),
+                    backgroundImage: AssetImage('assets/images/dev2.png'),
                   ),
                   SizedBox(width: 20),
                   Text(
@@ -161,15 +161,15 @@ class _AboutState extends State<About> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 DeveloperID(
-                  imagePath: 'images/dev1.jpg',
+                  imagePath: 'assets/images/dev1.jpg',
                   name: 'Josef Alexander S. Malic',
                 ),
                 DeveloperID(
-                  imagePath: 'images/dev2.png',
+                  imagePath: 'assets/images/dev2.png',
                   name: 'Mary Eddythe M. Sornito',
                 ),
                 DeveloperID(
-                  imagePath: 'images/dev3.jpg',
+                  imagePath: 'assets/images/dev3.jpg',
                   name: 'Kyle G. Velez',
                 ),
               ],
@@ -180,7 +180,7 @@ class _AboutState extends State<About> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
-                  image: AssetImage('images/edithorial-logo1.png'),
+                  image: AssetImage('assets/images/edithorial-logo1.png'),
                   fit: BoxFit.cover,
                 ),
               ),
