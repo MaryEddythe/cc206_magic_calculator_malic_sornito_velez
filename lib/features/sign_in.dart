@@ -1,3 +1,5 @@
+// ignore_for_file: use_full_hex_values_for_flutter_colors
+
 import 'package:flutter/material.dart';
 
 import 'home.dart';
@@ -21,11 +23,11 @@ class Signin extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 300),
+              const SizedBox(height: 300),
               Container(
                 width: 300,
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Email',
                     labelStyle: TextStyle(
                       fontFamily: 'Poppins',
@@ -38,12 +40,12 @@ class Signin extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Container(
                 width: 300,
                 child: TextFormField(
                   obscureText: true,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Password',
                     labelStyle: TextStyle(
                       fontFamily: 'Poppins',
@@ -56,22 +58,22 @@ class Signin extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacement(
-                      context, MaterialPageRoute(builder: (context) => Home()));
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => const Home()));
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: const Color(0xFFFF001747),
-                  onPrimary: Colors.white,
+                  foregroundColor: Colors.white,
+                  backgroundColor: const Color(0xffff001747),
                   padding:
                       const EdgeInsets.symmetric(vertical: 8, horizontal: 130),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(0.0),
                   ),
                 ),
-                child: Text(
+                child: const Text(
                   'Login',
                   style: TextStyle(
                     fontFamily: 'Poppins',
@@ -88,21 +90,23 @@ class Signin extends StatelessWidget {
                     'Don\'t have an account yet?  ',
                     style: TextStyle(
                       fontSize: 14,
-                      color: Color(0xFFFF001747),
+                      color: Color(0xffff001747),
                       fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (context) => Register()));
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Register()));
                     },
                     child: const Text(
                       'REGISTER NOW',
                       style: TextStyle(
                         fontSize: 14,
-                        color: Color(0xFFFF001747),
+                        color: Color(0xffff001747),
                         fontWeight: FontWeight.w600,
                         fontFamily: "Poppins",
                         decoration: TextDecoration.underline,
