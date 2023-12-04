@@ -26,7 +26,7 @@ class Signin extends StatelessWidget {
                 width: 300,
                 child: TextFormField(
                   decoration: InputDecoration(
-                    labelText: 'Username',
+                    labelText: 'Email',
                     labelStyle: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 15,
@@ -85,7 +85,7 @@ class Signin extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   const Text(
-                    'Have no account?  ',
+                    'Don\'t have an account yet?  ',
                     style: TextStyle(
                       fontSize: 14,
                       color: Color(0xFFFF001747),
@@ -99,7 +99,7 @@ class Signin extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => Register()));
                     },
                     child: const Text(
-                      'REGISTER NOW ',
+                      'REGISTER NOW',
                       style: TextStyle(
                         fontSize: 14,
                         color: Color(0xFFFF001747),
