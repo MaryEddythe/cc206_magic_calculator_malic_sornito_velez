@@ -13,7 +13,7 @@ class RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/sample.png'),
             fit: BoxFit.cover,
@@ -25,54 +25,77 @@ class RegisterState extends State<Register> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                SizedBox(height: 300),
+                const SizedBox(height: 200),
                 Container(
-                  width: 300,
+                  width: 350,
                   child: TextFormField(
                     decoration: InputDecoration(
                       labelText: 'Email',
-                      labelStyle: TextStyle(
+                      labelStyle: const TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 15,
                         fontWeight: FontWeight.w600,
                       ),
-                      border: OutlineInputBorder(),
-                      prefixIcon: Icon(Icons.person),
-                      contentPadding: EdgeInsets.symmetric(vertical: 5),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0), 
+                      ),
+                      prefixIcon: const Icon(Icons.person),
+                      contentPadding: const EdgeInsets.symmetric(vertical: 5),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Container(
-                  width: 300,
+                  width: 350,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      labelText: 'Fullname', 
+                      labelStyle: const TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0), 
+                      ),
+                      prefixIcon: const Icon(Icons.person),
+                      contentPadding: const EdgeInsets.symmetric(vertical: 5),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Container(
+                  width: 350,
                   child: TextFormField(
                     obscureText: true,
                     decoration: InputDecoration(
                       labelText: 'Password',
-                      labelStyle: TextStyle(
+                      labelStyle: const TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 15,
                         fontWeight: FontWeight.w600,
                       ),
-                      border: OutlineInputBorder(),
-                      prefixIcon: Icon(Icons.lock),
-                      contentPadding: EdgeInsets.symmetric(vertical: 5),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0), 
+                      ),
+                      prefixIcon: const Icon(Icons.lock),
+                      contentPadding: const EdgeInsets.symmetric(vertical: 5),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     primary: const Color(0xFFFF001747),
                     onPrimary: Colors.white,
                     padding: const EdgeInsets.symmetric(
-                        vertical: 8, horizontal: 118),
+                        vertical: 8, horizontal: 145),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(0.0),
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Register',
                     style: TextStyle(
                       fontFamily: 'Poppins',
@@ -85,7 +108,7 @@ class RegisterState extends State<Register> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text(
+                    const Text(
                       'Already have an account?  ',
                       style: TextStyle(
                         fontSize: 14,
@@ -101,7 +124,7 @@ class RegisterState extends State<Register> {
                           MaterialPageRoute(builder: (context) => Signin()),
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         'SIGN IN',
                         style: TextStyle(
                           fontSize: 14,
@@ -122,3 +145,4 @@ class RegisterState extends State<Register> {
     );
   }
 }
+

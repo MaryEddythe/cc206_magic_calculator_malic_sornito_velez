@@ -21,7 +21,7 @@ class Signin extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 300),
+              SizedBox(height: 250),
               Container(
                 width: 300,
                 child: TextFormField(

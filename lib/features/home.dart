@@ -116,15 +116,15 @@ class _HomeState extends State<Home> {
                 width: 35,
               ),
               SizedBox(width: 8), 
-              Text(
-                "Edithor.ial",
-                style: TextStyle(
-                  fontFamily: 'Lora',
-                  fontSize: 18,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              // Text(
+              //   "Edithor.ial",
+              //   style: TextStyle(
+              //     fontFamily: 'Lora',
+              //     fontSize: 18,
+              //     color: Colors.white,
+              //     fontWeight: FontWeight.bold,
+              //   ),
+              // ),
             ],
           ),
         ),

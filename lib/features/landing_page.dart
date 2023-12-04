@@ -36,7 +36,8 @@ class _LandingPageState extends State<LandingPage> {
             Text("Behold the gateway to the unfiltered truth.",
                 style: TextStyle(
                     color: Colors.black,
-                    fontSize: 16.0,
+                    fontSize: 14.0,
+                    fontFamily: "Poppins",
                     fontWeight: FontWeight.w500)),
             SizedBox(
               height: 20.0,
