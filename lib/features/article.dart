@@ -1,76 +1,159 @@
+import 'package:cc206_magic_calculator_malic_sornito_velez/components/about.dart';
+import 'package:cc206_magic_calculator_malic_sornito_velez/components/settings.dart';
+import 'package:cc206_magic_calculator_malic_sornito_velez/features/home.dart';
+import 'package:cc206_magic_calculator_malic_sornito_velez/features/signin.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 void main() {
-  runApp(Header());
+  runApp(const Header());
 }
 
-class Header extends StatelessWidget {
+class Header extends StatefulWidget {
+  const Header({Key? key}) : super(key: key);
+
+  @override
+  _HeaderState createState() => _HeaderState();
+}
+
+class _HeaderState extends State<Header> {
+  int _currentIndex = 1;
+
+  final List<Widget> _pages = const [
+    Home(),
+    NewsArticlePage(),
+    // ProfilePage(), 
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+
+    if (index == 0) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));
+    } else if (index == 1) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const About()));
+    } else if (index == 2) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const Signin()));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: DefaultTabController(
-        length: 3,
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text(
-              'edithor.ial',
-              style: GoogleFonts.lora(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            'edithor.ial',
+            style: TextStyle(
+              fontSize: 16,
+              fontFamily: 'Lora',
+              fontWeight: FontWeight.bold,
             ),
-            backgroundColor: Color(0xFF001747),
-            actions: [
-              IconButton(
-                icon: Icon(Icons.notifications, size: 16),
-                onPressed: () {},
-              ),
-            ],
           ),
-          body: ListView(
-            children: [
-              SizedBox(height: 15),
-              Padding(
-                padding: const EdgeInsets.only(left: 16.0), 
+          centerTitle: true,
+          backgroundColor: const Color(0xFF001747),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.notifications, size: 16),
+              onPressed: () {},
+            ),
+          ],
+        ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Color(0xFF001747),
+                ),
                 child: Text(
-                  'Breaking News',
-                  style: GoogleFonts.lora(
-                    color: Color(0xFF001747),
-                    fontSize: 30,
-                    fontWeight: FontWeight.w800,
+                  'Welcome, Mary!',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontFamily: 'Lora',
                   ),
                 ),
               ),
-              SizedBox(height: 10),
-              NewsArticlePage(),
-            ],
-          ),
-          bottomNavigationBar: BottomNavigationBar(
-            unselectedItemColor: Color(0xFF808080),
-            selectedItemColor: Color(0xFF345AAD),
-            currentIndex: 1,
-            items: [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Home',
+              ListTile(
+                leading: const Icon(Icons.settings),
+                title: const Text('Settings'),
+                onTap: () {
+                  _onItemTapped(0); 
+                },
               ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.newspaper),
-                label: 'Articles',
+              ListTile(
+                leading: const Icon(Icons.info),
+                title: const Text('About Us'),
+                onTap: () {
+                  _onItemTapped(1); 
+                },
               ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                label: 'Profile',
+              ListTile(
+                leading: const Icon(Icons.exit_to_app),
+                title: const Text('Logout'),
+                onTap: () {
+                  _onItemTapped(2); 
+                },
               ),
             ],
           ),
         ),
+        body: ListView(
+          children: [
+            const SizedBox(height: 15),
+            const Padding(
+              padding: EdgeInsets.only(left: 16.0),
+              child: Text(
+                'Breaking News',
+                style: TextStyle(
+                  fontFamily: 'Lora',
+                  color: Color(0xFF001747),
+                  fontSize: 30,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
+            Container(
+              color: Colors.white,
+              child: _pages[_currentIndex],
+            ),
+          ],
+        ),
+        bottomNavigationBar: buildBottomNavigationBar(),
       ),
     );
   }
+
+  BottomNavigationBar buildBottomNavigationBar() {
+    return BottomNavigationBar(
+      selectedItemColor: const Color(0xFF0D1333),
+      currentIndex: _currentIndex,
+      onTap: _onItemTapped,
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home_filled),
+          label: 'Home',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.newspaper),
+          label: 'News',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.bookmark),
+          label: 'Bookmark',
+        ),
+      ],
+    );
+  }
 }
+
+
+
 
 
 class NewsArticle {
@@ -86,7 +169,10 @@ class NewsArticle {
 }
 
 class NewsArticlePage extends StatelessWidget {
-  Widget _buildRoundedImageWithGradient(String imagePath, String mainText, String subText) {
+  const NewsArticlePage({super.key});
+
+  Widget _buildRoundedImageWithGradient(String imagePath, String mainText,
+      String subText) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: Stack(
@@ -97,7 +183,7 @@ class NewsArticlePage extends StatelessWidget {
             width: double.infinity,
           ),
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -114,7 +200,8 @@ class NewsArticlePage extends StatelessWidget {
               children: [
                 Text(
                   mainText,
-                  style: GoogleFonts.lora(
+                  style: const TextStyle(
+                    fontFamily: 'Lora',
                     color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -124,7 +211,8 @@ class NewsArticlePage extends StatelessWidget {
                 ),
                 Text(
                   subText,
-                  style: GoogleFonts.spaceMono(
+                  style: const TextStyle(
+                    fontFamily: 'SpaceMono',
                     color: Colors.white,
                     fontSize: 8,
                   ),
@@ -140,37 +228,40 @@ class NewsArticlePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<NewsArticle> articles = [
-  NewsArticle(
-    imagePath: 'assets/images/news1.jpg',
-    mainText: 'UN: Will help Palestine, Israel resolve conflict',
-    subText: 'Published 2 hours ago',
-  ),
-  NewsArticle(
-    imagePath: 'assets/images/news2.jpg',
-    mainText: 'Israel Took Advantage of 9/11 to Wage War on Palestine | CNN News',
-    subText: 'Published 12 hours ago',
-  ),
-  NewsArticle(
-    imagePath: 'assets/images/news3.jpg',
-    mainText: 'Election results transmission starts | GMA News',
-    subText: 'Published 6 hours ago',
-  ),
-  NewsArticle(
-    imagePath: 'assets/images/news4.jpg',
-    mainText: 'October 30 declared a special non-working day for barangay, SK polls',
-    subText: 'Published 30 minutes ago',
-  ),
-  NewsArticle(
-    imagePath: 'assets/images/news5.jpg',
-    mainText: 'Filipinos flock to cemeteries ahead of Undas | ABS-CBN News',
-    subText: 'Published 5 minutes ago',
-  ),
-];
+      NewsArticle(
+        imagePath: 'assets/images/news1.jpg',
+        mainText: 'UN: Will help Palestine, Israel resolve conflict',
+        subText: 'Published 2 hours ago',
+      ),
+      NewsArticle(
+        imagePath: 'assets/images/news2.jpg',
+        mainText: 'Israel Took Advantage of 9/11 to Wage War on Palestine | CNN News',
+        subText: 'Published 12 hours ago',
+      ),
+      NewsArticle(
+        imagePath: 'assets/images/news3.jpg',
+        mainText: 'Election results transmission starts | GMA News',
+        subText: 'Published 6 hours ago',
+      ),
+      NewsArticle(
+        imagePath: 'assets/images/news4.jpg',
+        mainText: 'October 30 declared a special non-working day for barangay, SK polls',
+        subText: 'Published 30 minutes ago',
+      ),
+      NewsArticle(
+        imagePath: 'assets/images/news5.jpg',
+        mainText: 'Filipinos flock to cemeteries ahead of Undas | ABS-CBN News',
+        subText: 'Published 5 minutes ago',
+      ),
+    ];
 
-    
-    double containerWidth = MediaQuery.of(context).size.width * 0.96;
-    
-   return Column( 
+
+    double containerWidth = MediaQuery
+        .of(context)
+        .size
+        .width * 0.96;
+
+    return Column(
       children: [
         CarouselSlider(
           options: CarouselOptions(
@@ -181,17 +272,19 @@ class NewsArticlePage extends StatelessWidget {
           ),
           items: articles.map((article) {
             return Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
-              child: _buildRoundedImageWithGradient(article.imagePath, article.mainText, article.subText),
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: _buildRoundedImageWithGradient(
+                  article.imagePath, article.mainText, article.subText),
             );
           }).toList(),
         ),
-        SizedBox(height: 30),
-        Padding(
+        const SizedBox(height: 30),
+        const Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Text(
             'Recent News',
-            style: GoogleFonts.lora(
+            style: TextStyle(
+              fontFamily: 'Lora',
               color: Color(0xFF001747),
               fontSize: 20,
               fontWeight: FontWeight.w800,
@@ -199,9 +292,9 @@ class NewsArticlePage extends StatelessWidget {
           ),
         ),
         _buildRoundedContainer(containerWidth, 80, Colors.black),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         _buildRoundedContainer(containerWidth, 80, Colors.black),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         _buildRoundedContainer(containerWidth, 80, Colors.black),
       ],
     );
@@ -209,11 +302,14 @@ class NewsArticlePage extends StatelessWidget {
 
   Widget _buildRoundedContainer(double width, double height, Color color) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(10),
+      borderRadius: BorderRadius.circular(20),
       child: Container(
         width: width,
         height: height,
-        color: color,
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(20),
+        ),
       ),
     );
   }

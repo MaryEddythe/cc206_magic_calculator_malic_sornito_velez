@@ -1,3 +1,4 @@
+import 'package:cc206_magic_calculator_malic_sornito_velez/features/register.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cc206_magic_calculator_malic_sornito_velez/features/article.dart';
@@ -9,9 +10,9 @@ class Signin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/wallpaper.jpg"),
+            image: AssetImage('assets/images/sample.png'), 
             fit: BoxFit.cover,
           ),
         ),
@@ -20,8 +21,9 @@ class Signin extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              SizedBox(height: 300),
               Container(
-                width: 225,
+                width: 300,
                 child: TextFormField(
                   decoration: InputDecoration(
                     labelText: 'Username',
@@ -30,12 +32,14 @@ class Signin extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                     border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.person),
+                    contentPadding: EdgeInsets.symmetric(vertical: 5), 
                   ),
                 ),
               ),
               SizedBox(height: 20),
               Container(
-                width: 225, 
+                width: 300,
                 child: TextFormField(
                   obscureText: true,
                   decoration: InputDecoration(
@@ -45,29 +49,62 @@ class Signin extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                     border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.lock),
+                    contentPadding: EdgeInsets.symmetric(vertical: 5), 
                   ),
                 ),
               ),
-
-
-             
               SizedBox(height: 20),
               ElevatedButton(
-              onPressed: () { //onPressed section working//
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Header())); //next section working//
-              },
-              style: ElevatedButton.styleFrom(
-              primary: Color(0xFFFF001747),
-              onPrimary: Colors.white,
-             ),
-             child: Text(
-            'Sign In',
-             style: GoogleFonts.poppins( 
-            fontSize: 15,
-            fontWeight: FontWeight.w600,
-            ),
-          ),
-        )
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Header())); 
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: const Color(0xFFFF001747),
+                  onPrimary: Colors.white,
+                  padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 130),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(0.0), 
+                  ),
+                ),
+                child: Text(
+                  'Login',
+                  style: GoogleFonts.poppins(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.2), 
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  const Text(
+                    'Have no account?  ',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Color(0xFFFF001747),
+                      fontFamily: "Poppins",
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => Register())); 
+                    },
+                    child: const Text(
+                      'REGISTER NOW ',
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Color(0xFFFF001747),
+                        fontWeight: FontWeight.w600,
+                        fontFamily: "Poppins",
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
@@ -75,3 +112,4 @@ class Signin extends StatelessWidget {
     );
   }
 }
+
