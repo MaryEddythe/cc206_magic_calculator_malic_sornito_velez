@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
         title: 'Edithor.ial',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF00072d)),
+          colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF00072d)),
           fontFamily: 'Lora',
           useMaterial3: true,
         ),
-        home: LandingPage());
+        home: const LandingPage());
   }
 }
