@@ -1,3 +1,5 @@
+// ignore_for_file: use_full_hex_values_for_flutter_colors
+
 import 'package:flutter/material.dart';
 import 'sign_in.dart';
 
@@ -49,14 +51,14 @@ class RegisterState extends State<Register> {
                   width: 350,
                   child: TextFormField(
                     decoration: InputDecoration(
-                      labelText: 'Fullname', 
+                      labelText: 'Fullname',
                       labelStyle: const TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 15,
                         fontWeight: FontWeight.w600,
                       ),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0), 
+                        borderRadius: BorderRadius.circular(10.0),
                       ),
                       prefixIcon: const Icon(Icons.person),
                       contentPadding: const EdgeInsets.symmetric(vertical: 5),
@@ -76,7 +78,7 @@ class RegisterState extends State<Register> {
                         fontWeight: FontWeight.w600,
                       ),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0), 
+                        borderRadius: BorderRadius.circular(10.0),
                       ),
                       prefixIcon: const Icon(Icons.lock),
                       contentPadding: const EdgeInsets.symmetric(vertical: 5),
@@ -87,11 +89,13 @@ class RegisterState extends State<Register> {
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    primary: const Color(0xFFFF001747),
-                    onPrimary: Colors.white,
-                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 145),
+                    foregroundColor: Colors.white,
+                    backgroundColor: const Color(0xFFFF001747),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 8, horizontal: 145),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0), // Add this line
+                      borderRadius:
+                          BorderRadius.circular(10.0), // Add this line
                     ),
                   ),
                   child: const Text(
@@ -103,7 +107,6 @@ class RegisterState extends State<Register> {
                     ),
                   ),
                 ),
-
                 SizedBox(height: MediaQuery.of(context).size.height * 0.2),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -121,7 +124,8 @@ class RegisterState extends State<Register> {
                       onTap: () {
                         Navigator.pushReplacement(
                           context,
-                          MaterialPageRoute(builder: (context) => Signin()),
+                          MaterialPageRoute(
+                              builder: (context) => const Signin()),
                         );
                       },
                       child: const Text(
@@ -143,6 +147,5 @@ class RegisterState extends State<Register> {
         ),
       ),
     );
-  } 
+  }
 }
-

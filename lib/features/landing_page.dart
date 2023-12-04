@@ -14,7 +14,7 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 30.0),
+        margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 30.0),
         child: Column(
           children: [
             Material(
@@ -30,24 +30,24 @@ class _LandingPageState extends State<LandingPage> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15.0,
             ),
-            Text("Behold the gateway to the unfiltered truth.",
+            const Text("Behold the gateway to the unfiltered truth.",
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 14.0,
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w500)),
-            SizedBox(
+            const SizedBox(
               height: 20.0,
             ),
-            Text("No. 1 Most Trusted News Source of 2023",
+            const Text("No. 1 Most Trusted News Source of 2023",
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 10.0,
                     fontWeight: FontWeight.bold)),
-            SizedBox(
+            const SizedBox(
               height: 20.0,
             ),
             Container(
@@ -56,9 +56,9 @@ class _LandingPageState extends State<LandingPage> {
                 borderRadius: BorderRadius.circular(30),
                 elevation: 5.0,
                 child: Container(
-                    padding: EdgeInsets.symmetric(vertical: 15.0),
+                    padding: const EdgeInsets.symmetric(vertical: 15.0),
                     decoration: BoxDecoration(
-                        color: Color(0xFF00072d),
+                        color: const Color(0xFF00072d),
                         borderRadius: BorderRadius.circular(30)),
                     child: Center(
                       child: GestureDetector(
@@ -66,9 +66,9 @@ class _LandingPageState extends State<LandingPage> {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Signin()));
+                                  builder: (context) => const Signin()));
                         },
-                        child: Text("Get Started",
+                        child: const Text("Get Started",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 17.0,

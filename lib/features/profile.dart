@@ -22,13 +22,13 @@ class _ProfileState extends State<Profile> {
 
       if (indexBnb == 0) {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Home()));
+            context, MaterialPageRoute(builder: (context) => const Home()));
       } else if (indexBnb == 1) {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => NewsHome()));
+            context, MaterialPageRoute(builder: (context) => const NewsHome()));
       } else if (indexBnb == 2) {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Profile()));
+            context, MaterialPageRoute(builder: (context) => const Profile()));
       }
     });
   }
@@ -63,7 +63,7 @@ class _ProfileState extends State<Profile> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: bgColor,
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black26,
             spreadRadius: 1,
@@ -72,8 +72,8 @@ class _ProfileState extends State<Profile> {
           ),
         ],
       ),
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      margin: EdgeInsets.all(3.0),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      margin: const EdgeInsets.all(3.0),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -95,10 +95,10 @@ class _ProfileState extends State<Profile> {
             ),
           if (iconData != null && imageUrl == null)
             Icon(iconData, color: Colors.black),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Text(
             label ?? '',
-            style: TextStyle(
+            style: const TextStyle(
                 color: Color.fromARGB(255, 0, 0, 0),
                 fontSize: 13,
                 fontWeight: FontWeight.w700),
@@ -113,10 +113,10 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xFF001747),
+        backgroundColor: const Color(0xFF001747),
         elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.white),
-        title: Padding(
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: const Padding(
           padding: EdgeInsets.only(right: 45.0),
           child: Center(
             child: Text(
@@ -132,10 +132,10 @@ class _ProfileState extends State<Profile> {
         ),
       ),
       drawer: Drawer(
-        backgroundColor: Color(0xFF001747),
+        backgroundColor: const Color(0xFF001747),
         child: Column(
           children: <Widget>[
-            DrawerHeader(
+            const DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/people.jpg'),
@@ -165,9 +165,10 @@ class _ProfileState extends State<Profile> {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.home_work_outlined, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading:
+                  const Icon(Icons.home_work_outlined, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'Home',
                 style: TextStyle(
                   color: Colors.white,
@@ -182,9 +183,9 @@ class _ProfileState extends State<Profile> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.settings, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading: const Icon(Icons.settings, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'Settings',
                 style: TextStyle(
                   color: Colors.white,
@@ -194,14 +195,14 @@ class _ProfileState extends State<Profile> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Settings()),
+                  MaterialPageRoute(builder: (context) => const Settings()),
                 );
               },
             ),
             ListTile(
-              leading: Icon(Icons.info, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading: const Icon(Icons.info, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'About Us',
                 style: TextStyle(
                   color: Colors.white,
@@ -211,7 +212,7 @@ class _ProfileState extends State<Profile> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => About()),
+                  MaterialPageRoute(builder: (context) => const About()),
                 );
               },
             ),
@@ -219,9 +220,9 @@ class _ProfileState extends State<Profile> {
               child: Container(),
             ),
             ListTile(
-              leading: Icon(Icons.logout_outlined, color: Colors.white),
-              tileColor: Color.fromARGB(255, 0, 15, 50),
-              title: Text(
+              leading: const Icon(Icons.logout_outlined, color: Colors.white),
+              tileColor: const Color.fromARGB(255, 0, 15, 50),
+              title: const Text(
                 'Logout',
                 style: TextStyle(
                   color: Colors.white,
@@ -231,7 +232,7 @@ class _ProfileState extends State<Profile> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Signin()),
+                  MaterialPageRoute(builder: (context) => const Signin()),
                 );
               },
             ),
@@ -240,17 +241,19 @@ class _ProfileState extends State<Profile> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.all(15.0),
+          padding: const EdgeInsets.all(15.0),
           color: Colors.white,
           child: Column(
             children: [
               Align(
                 alignment: Alignment.topRight,
                 child: IconButton(
-                  icon: Icon(Icons.settings),
+                  icon: const Icon(Icons.settings),
                   onPressed: () {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => Settings()));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Settings()));
                   },
                 ),
               ),
@@ -263,26 +266,26 @@ class _ProfileState extends State<Profile> {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 5,
                       blurRadius: 7,
-                      offset: Offset(0, 3),
+                      offset: const Offset(0, 3),
                     ),
                   ],
                 ),
-                child: CircleAvatar(
+                child: const CircleAvatar(
                   radius: 60,
                   backgroundImage: AssetImage('assets/images/dev2.png'),
                 ),
               ),
-              SizedBox(height: 40),
-              Text(
+              const SizedBox(height: 40),
+              const Text(
                 'Mary Eddythe S. Sornito',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 50), //end of profile
+              const SizedBox(height: 50), //end of profile
               Container(
-                padding: EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10.0),
@@ -291,45 +294,45 @@ class _ProfileState extends State<Profile> {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 2,
                       blurRadius: 5,
-                      offset: Offset(0, 2),
+                      offset: const Offset(0, 2),
                     ),
                   ],
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Text(
+                    const Text(
                       'Your Interests',
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Row(
                       children: [
                         _buildInterestCard(
                             iconData: Icons.computer,
                             label: 'Tech',
-                            bgColor: Color.fromRGBO(255, 255, 255, 100)),
+                            bgColor: const Color.fromRGBO(255, 255, 255, 100)),
                         _buildInterestCard(
                             imageUrl:
                                 "https://st3.depositphotos.com/1071909/19574/i/450/depositphotos_195745476-stock-photo-artificial-intelligence-ai.jpg",
                             label: 'AI',
-                            bgColor: Color.fromRGBO(255, 255, 255, 100)),
+                            bgColor: const Color.fromRGBO(255, 255, 255, 100)),
                         _buildInterestCard(
                             imageUrl:
                                 'https://static4.depositphotos.com/1000507/360/i/600/depositphotos_3606155-stock-photo-multi-coloured-wardrobe-showcase-closeup.jpg',
                             label: 'Fashion',
-                            bgColor: Color.fromRGBO(255, 255, 255, 100))
+                            bgColor: const Color.fromRGBO(255, 255, 255, 100))
                       ],
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 20), //end of interests section
+              const SizedBox(height: 20), //end of interests section
               Container(
-                padding: EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10.0),
@@ -338,11 +341,11 @@ class _ProfileState extends State<Profile> {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 2,
                       blurRadius: 5,
-                      offset: Offset(0, 2),
+                      offset: const Offset(0, 2),
                     ),
                   ],
                 ),
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Text(
@@ -355,7 +358,7 @@ class _ProfileState extends State<Profile> {
                     SizedBox(height: 10),
                     Icon(Icons.book),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Text(
                         'You have no reading history yet. ',
                         style: TextStyle(
@@ -367,16 +370,17 @@ class _ProfileState extends State<Profile> {
                   ],
                 ),
               ),
-              SizedBox(height: 50),
+              const SizedBox(height: 50),
               ElevatedButton.icon(
                 onPressed: () {},
-                label: Text('Support the Edithor.ial'),
+                label: const Text('Support the Edithor.ial'),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF001747),
+                  backgroundColor: const Color(0xFF001747),
                   foregroundColor: Colors.white,
-                  padding: EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
                 ),
-                icon: Icon(Icons.arrow_forward),
+                icon: const Icon(Icons.arrow_forward),
               )
             ],
           ),

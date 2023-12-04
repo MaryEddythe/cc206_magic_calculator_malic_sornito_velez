@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -15,10 +17,10 @@ class _ArticleViewState extends State<ArticleView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFF001747),
+          backgroundColor: const Color(0xFF001747),
           elevation: 0.0,
-          iconTheme: IconThemeData(color: Colors.white),
-          title: Padding(
+          iconTheme: const IconThemeData(color: Colors.white),
+          title: const Padding(
             padding: EdgeInsets.only(right: 45.0),
             child: Center(
               child: Text(

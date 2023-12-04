@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import '../models/show_category.dart';
@@ -39,22 +41,22 @@ class _CategoryNewsState extends State<CategoryNews> {
         appBar: AppBar(
           title: Text(
             widget.name,
-            style: TextStyle(
+            style: const TextStyle(
                 fontFamily: 'Lora',
                 fontSize: 18,
                 color: Colors.white,
                 fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
-          backgroundColor: Color(0xFF001747),
+          backgroundColor: const Color(0xFF001747),
           elevation: 0.0,
-          iconTheme: IconThemeData(color: Colors.white),
+          iconTheme: const IconThemeData(color: Colors.white),
         ),
         body: Container(
-          margin: EdgeInsets.symmetric(horizontal: 10.0),
+          margin: const EdgeInsets.symmetric(horizontal: 10.0),
           child: ListView.builder(
               shrinkWrap: true,
-              physics: ClampingScrollPhysics(),
+              physics: const ClampingScrollPhysics(),
               itemCount: categories.length,
               itemBuilder: (context, index) {
                 return ShowCategory(
@@ -87,7 +89,7 @@ class ShowCategory extends StatelessWidget {
       child: Container(
           child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 5.0,
           ),
           ClipRRect(
@@ -98,19 +100,19 @@ class ShowCategory extends StatelessWidget {
                 height: 200,
                 fit: BoxFit.cover),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5.0,
           ),
           Text(title,
               maxLines: 2,
-              style: TextStyle(
+              style: const TextStyle(
                   color: Colors.black,
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold)),
           Text(desc,
               maxLines: 3,
-              style: TextStyle(color: Colors.black, fontSize: 14.0)),
-          SizedBox(
+              style: const TextStyle(color: Colors.black, fontSize: 14.0)),
+          const SizedBox(
             height: 20.0,
           ),
         ],

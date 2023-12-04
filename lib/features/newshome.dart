@@ -21,13 +21,13 @@ class _NewsHomeState extends State<NewsHome> {
 
       if (indexBnb == 0) {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Home()));
+            context, MaterialPageRoute(builder: (context) => const Home()));
       } else if (indexBnb == 1) {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => NewsHome()));
+            context, MaterialPageRoute(builder: (context) => const NewsHome()));
       } else if (indexBnb == 2) {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Profile()));
+            context, MaterialPageRoute(builder: (context) => const Profile()));
       }
     });
   }
@@ -62,48 +62,48 @@ class _NewsHomeState extends State<NewsHome> {
       children: [
         Text(
           genre,
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: sourceWidgets,
           ),
         ),
-        SizedBox(height: 30),
+        const SizedBox(height: 30),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("See more in "),
+            const Text("See more in "),
             Text(
               genre,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 decoration: TextDecoration.underline,
               ),
             ),
           ],
         ),
-        Divider(),
-        SizedBox(height: 20),
+        const Divider(),
+        const SizedBox(height: 20),
       ],
     );
   }
 
   Widget _buildSourceWidget(String name, String logoPath) {
     return Padding(
-      padding: EdgeInsets.only(right: 16),
+      padding: const EdgeInsets.only(right: 16),
       child: Column(
         children: [
           CircleAvatar(
             radius: 30,
             backgroundImage: AssetImage(logoPath),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(
             name,
-            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
+            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
           ),
         ],
       ),
@@ -114,7 +114,7 @@ class _NewsHomeState extends State<NewsHome> {
     return Container(
       width: 10,
       height: 10,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color.fromARGB(255, 4, 0, 255),
         shape: BoxShape.circle,
       ),
@@ -126,10 +126,10 @@ class _NewsHomeState extends State<NewsHome> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xFF001747),
+        backgroundColor: const Color(0xFF001747),
         elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.white),
-        title: Padding(
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: const Padding(
           padding: EdgeInsets.only(right: 45.0),
           child: Center(
             child: Text(
@@ -145,10 +145,10 @@ class _NewsHomeState extends State<NewsHome> {
         ),
       ),
       drawer: Drawer(
-        backgroundColor: Color(0xFF001747),
+        backgroundColor: const Color(0xFF001747),
         child: Column(
           children: <Widget>[
-            DrawerHeader(
+            const DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/people.jpg'),
@@ -178,9 +178,10 @@ class _NewsHomeState extends State<NewsHome> {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.home_work_outlined, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading:
+                  const Icon(Icons.home_work_outlined, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'Home',
                 style: TextStyle(
                   color: Colors.white,
@@ -195,9 +196,9 @@ class _NewsHomeState extends State<NewsHome> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.settings, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading: const Icon(Icons.settings, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'Settings',
                 style: TextStyle(
                   color: Colors.white,
@@ -207,14 +208,14 @@ class _NewsHomeState extends State<NewsHome> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Settings()),
+                  MaterialPageRoute(builder: (context) => const Settings()),
                 );
               },
             ),
             ListTile(
-              leading: Icon(Icons.info, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading: const Icon(Icons.info, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'About Us',
                 style: TextStyle(
                   color: Colors.white,
@@ -224,7 +225,7 @@ class _NewsHomeState extends State<NewsHome> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => About()),
+                  MaterialPageRoute(builder: (context) => const About()),
                 );
               },
             ),
@@ -232,9 +233,9 @@ class _NewsHomeState extends State<NewsHome> {
               child: Container(),
             ),
             ListTile(
-              leading: Icon(Icons.logout_outlined, color: Colors.white),
-              tileColor: Color.fromARGB(255, 0, 15, 50),
-              title: Text(
+              leading: const Icon(Icons.logout_outlined, color: Colors.white),
+              tileColor: const Color.fromARGB(255, 0, 15, 50),
+              title: const Text(
                 'Logout',
                 style: TextStyle(
                   color: Colors.white,
@@ -244,7 +245,7 @@ class _NewsHomeState extends State<NewsHome> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Signin()),
+                  MaterialPageRoute(builder: (context) => const Signin()),
                 );
               },
             ),
@@ -255,12 +256,12 @@ class _NewsHomeState extends State<NewsHome> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               color: Colors.grey[200],
               borderRadius: BorderRadius.circular(8),
             ),
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.star, color: Colors.orange),
@@ -278,21 +279,26 @@ class _NewsHomeState extends State<NewsHome> {
           ),
           Expanded(
             child: ListView(
-              padding: EdgeInsets.all(12),
+              padding: const EdgeInsets.all(12),
               children: [
                 _buildGenreWidget('Science and Technology', [
                   _buildSourceWidget('Recombu', 'assets/images/recombu-t.png'),
-                  _buildSourceWidget('PhoneRadar', 'assets/images/phoneradar-t.jpg'),
-                  _buildSourceWidget('GameByte', 'assets/images/gamebyte-t.png'),
+                  _buildSourceWidget(
+                      'PhoneRadar', 'assets/images/phoneradar-t.jpg'),
+                  _buildSourceWidget(
+                      'GameByte', 'assets/images/gamebyte-t.png'),
                   _buildSuggestionIndicator(),
                   _buildSourceWidget('New Scientist', 'assets/images/ns-t.jpg'),
-                  _buildSourceWidget('ChannelBiz', 'assets/images/channelbiz-t.png'),
+                  _buildSourceWidget(
+                      'ChannelBiz', 'assets/images/channelbiz-t.png'),
                 ]),
                 _buildGenreWidget('Entertainment', [
                   _buildSuggestionIndicator(),
                   _buildSourceWidget('Ok! Magazine', 'assets/images/ok-e.jpg'),
-                  _buildSourceWidget('RadioTimes', 'assets/images/radiotimes-e.png'),
-                  _buildSourceWidget('Student Problems', 'assets/images/sp-e.jpg'),
+                  _buildSourceWidget(
+                      'RadioTimes', 'assets/images/radiotimes-e.png'),
+                  _buildSourceWidget(
+                      'Student Problems', 'assets/images/sp-e.jpg'),
                   _buildSourceWidget('NME', 'assets/images/nme-e.png'),
                   _buildSourceWidget('Funny Vines', 'assets/images/fv-e.jpg'),
                 ]),
@@ -300,11 +306,13 @@ class _NewsHomeState extends State<NewsHome> {
                   _buildSourceWidget(
                       'Fehresian\nEnergetics', 'assets/images/fehr-h.jpg'),
                   _buildSuggestionIndicator(),
-                  _buildSourceWidget('Healthhunt', 'assets/images/healthhunt-h.jpg'),
-                  _buildSourceWidget('Nursing Times', 'assets/images/nt-h.png'),
                   _buildSourceWidget(
-                      'Pharmaceutical\nTechnology', 'assets/images/phartech-h.jpg'),
-                  _buildSourceWidget('TheMindClan', 'assets/images/themindclan-h.jpg'),
+                      'Healthhunt', 'assets/images/healthhunt-h.jpg'),
+                  _buildSourceWidget('Nursing Times', 'assets/images/nt-h.png'),
+                  _buildSourceWidget('Pharmaceutical\nTechnology',
+                      'assets/images/phartech-h.jpg'),
+                  _buildSourceWidget(
+                      'TheMindClan', 'assets/images/themindclan-h.jpg'),
                 ]),
               ],
             ),

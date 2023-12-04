@@ -17,10 +17,10 @@ class _AboutState extends State<About> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xFF001747),
+        backgroundColor: const Color(0xFF001747),
         elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.white),
-        title: Padding(
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: const Padding(
           padding: EdgeInsets.only(right: 45.0),
           child: Center(
             child: Text(
@@ -36,10 +36,10 @@ class _AboutState extends State<About> {
         ),
       ),
       drawer: Drawer(
-        backgroundColor: Color(0xFF001747),
+        backgroundColor: const Color(0xFF001747),
         child: Column(
           children: <Widget>[
-            DrawerHeader(
+            const DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/people.jpg'),
@@ -69,9 +69,10 @@ class _AboutState extends State<About> {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.home_work_outlined, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading:
+                  const Icon(Icons.home_work_outlined, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'Home',
                 style: TextStyle(
                   color: Colors.white,
@@ -86,9 +87,9 @@ class _AboutState extends State<About> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.settings, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading: const Icon(Icons.settings, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'Settings',
                 style: TextStyle(
                   color: Colors.white,
@@ -98,14 +99,14 @@ class _AboutState extends State<About> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Settings()),
+                  MaterialPageRoute(builder: (context) => const Settings()),
                 );
               },
             ),
             ListTile(
-              leading: Icon(Icons.info, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading: const Icon(Icons.info, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'About Us',
                 style: TextStyle(
                   color: Colors.white,
@@ -115,7 +116,7 @@ class _AboutState extends State<About> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => About()),
+                  MaterialPageRoute(builder: (context) => const About()),
                 );
               },
             ),
@@ -123,9 +124,9 @@ class _AboutState extends State<About> {
               child: Container(),
             ),
             ListTile(
-              leading: Icon(Icons.logout_outlined, color: Colors.white),
-              tileColor: Color.fromARGB(255, 0, 15, 50),
-              title: Text(
+              leading: const Icon(Icons.logout_outlined, color: Colors.white),
+              tileColor: const Color.fromARGB(255, 0, 15, 50),
+              title: const Text(
                 'Logout',
                 style: TextStyle(
                   color: Colors.white,
@@ -135,7 +136,7 @@ class _AboutState extends State<About> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Signin()),
+                  MaterialPageRoute(builder: (context) => const Signin()),
                 );
               },
             ),
@@ -143,11 +144,11 @@ class _AboutState extends State<About> {
         ),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
+            const Text(
               "Developers",
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -156,8 +157,8 @@ class _AboutState extends State<About> {
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: 20),
-            Row(
+            const SizedBox(height: 20),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 DeveloperID(
@@ -174,19 +175,19 @@ class _AboutState extends State<About> {
                 ),
               ],
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Container(
               height: 200,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: AssetImage('assets/images/edithorial-logo1.png'),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Your trusted companion in staying informed.',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -194,9 +195,9 @@ class _AboutState extends State<About> {
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
               child: Text(
                 'As a reliable news application, we are committed to delivering accurate, up-to-date news from around the world. With a focus on credibility and trustworthiness, we curate diverse news stories, offering a comprehensive view of current events, politics, technology, entertainment, and more. Our platform ensures that users receive factual information, empowering them to make informed decisions and stay updated in an ever-evolving world.',
                 textAlign: TextAlign.justify,
@@ -218,6 +219,7 @@ class DeveloperID extends StatelessWidget {
   final String imagePath;
   final String name;
 
+  // ignore: use_key_in_widget_constructors
   const DeveloperID({
     required this.imagePath,
     required this.name,
@@ -238,10 +240,10 @@ class DeveloperID extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Text(
           name,
-          style: TextStyle(
+          style: const TextStyle(
               fontSize: 8, fontWeight: FontWeight.bold, color: Colors.black),
         ),
       ],

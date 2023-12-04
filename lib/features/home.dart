@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_typing_uninitialized_variables, use_key_in_widget_constructors, annotate_overrides, prefer_const_constructors_in_immutables
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -62,13 +64,13 @@ class _HomeState extends State<Home> {
 
       if (indexBnb == 0) {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Home()));
+            context, MaterialPageRoute(builder: (context) => const Home()));
       } else if (indexBnb == 1) {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => NewsHome()));
+            context, MaterialPageRoute(builder: (context) => const NewsHome()));
       } else if (indexBnb == 2) {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Profile()));
+            context, MaterialPageRoute(builder: (context) => const Profile()));
       }
     });
   }
@@ -102,20 +104,20 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xFF001747),
+        backgroundColor: const Color(0xFF001747),
         elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.white),
         title: Padding(
-          padding: EdgeInsets.only(right: 30.0),
+          padding: const EdgeInsets.only(right: 30.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/images/edithorial-logo3.png', 
-                height: 35, 
+                'assets/images/edithorial-logo3.png',
+                height: 35,
                 width: 35,
               ),
-              SizedBox(width: 8), 
+              const SizedBox(width: 8),
               // Text(
               //   "Edithor.ial",
               //   style: TextStyle(
@@ -130,10 +132,10 @@ class _HomeState extends State<Home> {
         ),
       ),
       drawer: Drawer(
-        backgroundColor: Color(0xFF001747),
+        backgroundColor: const Color(0xFF001747),
         child: Column(
           children: <Widget>[
-            DrawerHeader(
+            const DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/people.jpg'),
@@ -148,8 +150,7 @@ class _HomeState extends State<Home> {
                 children: [
                   CircleAvatar(
                     radius: 30,
-                    backgroundImage: AssetImage(
-                        'assets/images/dev2.png'),
+                    backgroundImage: AssetImage('assets/images/dev2.png'),
                   ),
                   SizedBox(width: 20),
                   Text(
@@ -164,9 +165,10 @@ class _HomeState extends State<Home> {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.home_work_outlined, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading:
+                  const Icon(Icons.home_work_outlined, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'Home',
                 style: TextStyle(
                   color: Colors.white,
@@ -181,9 +183,9 @@ class _HomeState extends State<Home> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.settings, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading: const Icon(Icons.settings, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'Settings',
                 style: TextStyle(
                   color: Colors.white,
@@ -193,14 +195,14 @@ class _HomeState extends State<Home> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Settings()),
+                  MaterialPageRoute(builder: (context) => const Settings()),
                 );
               },
             ),
             ListTile(
-              leading: Icon(Icons.info, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading: const Icon(Icons.info, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'About Us',
                 style: TextStyle(
                   color: Colors.white,
@@ -210,7 +212,7 @@ class _HomeState extends State<Home> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => About()),
+                  MaterialPageRoute(builder: (context) => const About()),
                 );
               },
             ),
@@ -218,9 +220,9 @@ class _HomeState extends State<Home> {
               child: Container(),
             ),
             ListTile(
-              leading: Icon(Icons.logout_outlined, color: Colors.white),
-              tileColor: Color.fromARGB(255, 0, 15, 50),
-              title: Text(
+              leading: const Icon(Icons.logout_outlined, color: Colors.white),
+              tileColor: const Color.fromARGB(255, 0, 15, 50),
+              title: const Text(
                 'Logout',
                 style: TextStyle(
                   color: Colors.white,
@@ -230,7 +232,7 @@ class _HomeState extends State<Home> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Signin()),
+                  MaterialPageRoute(builder: (context) => const Signin()),
                 );
               },
             ),
@@ -238,14 +240,14 @@ class _HomeState extends State<Home> {
         ),
       ),
       body: _loading
-          ? Center(child: CircularProgressIndicator())
+          ? const Center(child: CircularProgressIndicator())
           : SingleChildScrollView(
               child: Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(left: 20.0, top: 10.0),
+                      margin: const EdgeInsets.only(left: 20.0, top: 10.0),
                       height: 70,
                       child: ListView.builder(
                           shrinkWrap: true,
@@ -258,7 +260,7 @@ class _HomeState extends State<Home> {
                             );
                           }),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30.0,
                     ),
                     Padding(
@@ -266,7 +268,7 @@ class _HomeState extends State<Home> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("Breaking News!",
+                          const Text("Breaking News!",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
@@ -279,7 +281,7 @@ class _HomeState extends State<Home> {
                                       builder: (context) =>
                                           AllNews(news: "Breaking")));
                             },
-                            child: Text("View All",
+                            child: const Text("View All",
                                 style: TextStyle(
                                     color: Color(0xFF001747),
                                     fontWeight: FontWeight.w500,
@@ -288,7 +290,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30.0,
                     ),
                     CarouselSlider.builder(
@@ -308,11 +310,11 @@ class _HomeState extends State<Home> {
                                 activeIndex = index;
                               });
                             })),
-                    SizedBox(
+                    const SizedBox(
                       height: 30.0,
                     ),
                     Center(child: buildIndicator()),
-                    SizedBox(
+                    const SizedBox(
                       height: 30.0,
                     ),
                     Padding(
@@ -320,7 +322,7 @@ class _HomeState extends State<Home> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("Your News",
+                          const Text("Your News",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
@@ -333,7 +335,7 @@ class _HomeState extends State<Home> {
                                       builder: (context) =>
                                           AllNews(news: "Your")));
                             },
-                            child: Text("View All",
+                            child: const Text("View All",
                                 style: TextStyle(
                                     color: Color(0xFF00072d),
                                     fontWeight: FontWeight.w500,
@@ -342,13 +344,13 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20.0,
                     ),
                     Container(
                       child: ListView.builder(
                           shrinkWrap: true,
-                          physics: ClampingScrollPhysics(),
+                          physics: const ClampingScrollPhysics(),
                           itemCount: articles.length,
                           itemBuilder: (context, index) {
                             return BlogTile(
@@ -367,7 +369,7 @@ class _HomeState extends State<Home> {
   }
 
   Widget buildImage(String image, int index, String name) => Container(
-      margin: EdgeInsets.symmetric(horizontal: 5.0),
+      margin: const EdgeInsets.symmetric(horizontal: 5.0),
       child: Stack(children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(10),
@@ -380,10 +382,10 @@ class _HomeState extends State<Home> {
         ),
         Container(
           height: 250,
-          padding: EdgeInsets.only(left: 10.0),
-          margin: EdgeInsets.only(top: 170.0),
+          padding: const EdgeInsets.only(left: 10.0),
+          margin: const EdgeInsets.only(top: 170.0),
           width: MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               color: Colors.black26,
               borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(10),
@@ -391,7 +393,7 @@ class _HomeState extends State<Home> {
           child: Text(
             name,
             maxLines: 2,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.white,
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold),
@@ -402,7 +404,7 @@ class _HomeState extends State<Home> {
   Widget buildIndicator() => AnimatedSmoothIndicator(
         activeIndex: activeIndex,
         count: 5,
-        effect: SlideEffect(
+        effect: const SlideEffect(
             dotWidth: 20, dotHeight: 20, activeDotColor: Color(0xFF001747)),
       );
 }
@@ -421,7 +423,7 @@ class CategoryTile extends StatelessWidget {
                 builder: (context) => CategoryNews(name: categoryName)));
       },
       child: Container(
-        margin: EdgeInsets.only(right: 16),
+        margin: const EdgeInsets.only(right: 16),
         child: Stack(
           children: [
             ClipRRect(
@@ -442,7 +444,7 @@ class CategoryTile extends StatelessWidget {
               child: Center(
                   child: Text(
                 categoryName,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -473,7 +475,7 @@ class BlogTile extends StatelessWidget {
             MaterialPageRoute(builder: (context) => ArticleView(blogUrl: url)));
       },
       child: Container(
-        margin: EdgeInsets.only(bottom: 10.0),
+        margin: const EdgeInsets.only(bottom: 10.0),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Material(
@@ -494,7 +496,7 @@ class BlogTile extends StatelessWidget {
                             width: 150,
                             fit: BoxFit.cover,
                           ))),
-                  SizedBox(
+                  const SizedBox(
                     width: 8.0,
                   ),
                   Column(
@@ -503,19 +505,19 @@ class BlogTile extends StatelessWidget {
                         width: MediaQuery.of(context).size.width / 2.5,
                         child: Text(title,
                             maxLines: 2,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.w500,
                                 fontSize: 17.0)),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 7.0,
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width / 2.5,
                         child: Text(desc,
                             maxLines: 3,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Colors.black54,
                                 fontWeight: FontWeight.w500,
                                 fontSize: 15.0)),

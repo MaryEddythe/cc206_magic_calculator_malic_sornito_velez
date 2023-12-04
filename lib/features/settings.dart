@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'about.dart';
 import 'home.dart';
@@ -16,10 +18,10 @@ class _SettingsState extends State<Settings> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xFF001747),
+        backgroundColor: const Color(0xFF001747),
         elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.white),
-        title: Padding(
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: const Padding(
           padding: EdgeInsets.only(right: 45.0),
           child: Center(
             child: Text(
@@ -34,11 +36,11 @@ class _SettingsState extends State<Settings> {
           ),
         ),
       ),
-     drawer: Drawer(
-        backgroundColor: Color(0xFF001747),
+      drawer: Drawer(
+        backgroundColor: const Color(0xFF001747),
         child: Column(
           children: <Widget>[
-            DrawerHeader(
+            const DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/people.jpg'),
@@ -68,9 +70,10 @@ class _SettingsState extends State<Settings> {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.home_work_outlined, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading:
+                  const Icon(Icons.home_work_outlined, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'Home',
                 style: TextStyle(
                   color: Colors.white,
@@ -85,9 +88,9 @@ class _SettingsState extends State<Settings> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.settings, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading: const Icon(Icons.settings, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'Settings',
                 style: TextStyle(
                   color: Colors.white,
@@ -97,14 +100,14 @@ class _SettingsState extends State<Settings> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Settings()),
+                  MaterialPageRoute(builder: (context) => const Settings()),
                 );
               },
             ),
             ListTile(
-              leading: Icon(Icons.info, color: Colors.white),
-              hoverColor: Color.fromARGB(200, 0, 22, 71),
-              title: Text(
+              leading: const Icon(Icons.info, color: Colors.white),
+              hoverColor: const Color.fromARGB(200, 0, 22, 71),
+              title: const Text(
                 'About Us',
                 style: TextStyle(
                   color: Colors.white,
@@ -114,7 +117,7 @@ class _SettingsState extends State<Settings> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => About()),
+                  MaterialPageRoute(builder: (context) => const About()),
                 );
               },
             ),
@@ -122,9 +125,9 @@ class _SettingsState extends State<Settings> {
               child: Container(),
             ),
             ListTile(
-              leading: Icon(Icons.logout_outlined, color: Colors.white),
-              tileColor: Color.fromARGB(255, 0, 15, 50),
-              title: Text(
+              leading: const Icon(Icons.logout_outlined, color: Colors.white),
+              tileColor: const Color.fromARGB(255, 0, 15, 50),
+              title: const Text(
                 'Logout',
                 style: TextStyle(
                   color: Colors.white,
@@ -134,7 +137,7 @@ class _SettingsState extends State<Settings> {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Signin()),
+                  MaterialPageRoute(builder: (context) => const Signin()),
                 );
               },
             ),
@@ -155,7 +158,7 @@ class SettingsPage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: ListView(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
           children: [
             buildSettingsCategory('Account', [
               buildSettingsItem('Edit Profile'),
@@ -185,7 +188,7 @@ class SettingsPage extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             categoryTitle,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
@@ -200,7 +203,7 @@ class SettingsPage extends StatelessWidget {
             children: items,
           ),
         ),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
       ],
     );
   }
@@ -208,7 +211,7 @@ class SettingsPage extends StatelessWidget {
   Widget buildSettingsItem(String settingItem) {
     return ListTile(
       title: Text(settingItem),
-      trailing: Icon(Icons.arrow_right_outlined, color: Colors.black),
+      trailing: const Icon(Icons.arrow_right_outlined, color: Colors.black),
       onTap: () {},
     );
   }
