@@ -77,7 +77,8 @@ class _SettingsState extends State<Settings> {
                 'Home',
                 style: TextStyle(
                   color: Colors.white,
-                  fontFamily: 'Lora',
+                  fontSize: 14,
+                  fontFamily: 'Poppins',
                 ),
               ),
               onTap: () {
@@ -94,7 +95,8 @@ class _SettingsState extends State<Settings> {
                 'Settings',
                 style: TextStyle(
                   color: Colors.white,
-                  fontFamily: 'Lora',
+                  fontSize: 14,
+                  fontFamily: 'Poppins',
                 ),
               ),
               onTap: () {
@@ -111,7 +113,8 @@ class _SettingsState extends State<Settings> {
                 'About Us',
                 style: TextStyle(
                   color: Colors.white,
-                  fontFamily: 'Lora',
+                  fontSize: 14,
+                  fontFamily: 'Poppins',
                 ),
               ),
               onTap: () {
@@ -131,7 +134,8 @@ class _SettingsState extends State<Settings> {
                 'Logout',
                 style: TextStyle(
                   color: Colors.white,
-                  fontFamily: 'Lora',
+                  fontSize: 14,
+                  fontFamily: 'Poppins',
                 ),
               ),
               onTap: () {

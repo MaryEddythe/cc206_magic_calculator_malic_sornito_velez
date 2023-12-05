@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'features/landing_page.dart';
+import 'splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +19,6 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Lora',
           useMaterial3: true,
         ),
-        home: const LandingPage());
+        home: const SplashScreen());
   }
 }
