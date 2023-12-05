@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../components/bot_nav_bar.dart';
+import '../components/drawer.dart';
 import 'about.dart';
 import 'home.dart';
 import 'profile.dart';
@@ -30,30 +32,6 @@ class _NewsHomeState extends State<NewsHome> {
             context, MaterialPageRoute(builder: (context) => const Profile()));
       }
     });
-  }
-
-  BottomNavigationBar buildBottomNavigationBar(BuildContext context) {
-    return BottomNavigationBar(
-      selectedItemColor: const Color(0xFFFFFFFF),
-      backgroundColor: const Color(0xFF0D1333),
-      unselectedItemColor: const Color(0xFF8A8A8A),
-      currentIndex: botNavBarOption,
-      onTap: botNavBarTap,
-      items: const [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home_work_outlined),
-          label: 'Home',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.newspaper),
-          label: 'Newsstand',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.face_outlined),
-          label: 'Profile',
-        ),
-      ],
-    );
   }
 
   Widget _buildGenreWidget(String genre, List<Widget> sourceWidgets) {
@@ -144,113 +122,31 @@ class _NewsHomeState extends State<NewsHome> {
           ),
         ),
       ),
-      drawer: Drawer(
-        backgroundColor: const Color(0xFF001747),
-        child: Column(
-          children: <Widget>[
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/people.jpg'),
-                  fit: BoxFit.cover,
-                  colorFilter: ColorFilter.mode(
-                    Color.fromARGB(100, 0, 22, 71),
-                    BlendMode.darken,
-                  ),
-                ),
-              ),
-              child: Row(
-                children: [
-                  CircleAvatar(
-                    radius: 30,
-                    backgroundImage: AssetImage('assets/images/dev2.png'),
-                  ),
-                  SizedBox(width: 20),
-                  Text(
-                    'Welcome, Mary!',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24,
-                      fontFamily: 'Lora',
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            ListTile(
-              leading:
-                  const Icon(Icons.home_work_outlined, color: Colors.white),
-              hoverColor: const Color.fromARGB(200, 0, 22, 71),
-              title: const Text(
-                'Home',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Lora',
-                ),
-              ),
-              onTap: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Home()),
-                );
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.settings, color: Colors.white),
-              hoverColor: const Color.fromARGB(200, 0, 22, 71),
-              title: const Text(
-                'Settings',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Lora',
-                ),
-              ),
-              onTap: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Settings()),
-                );
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.info, color: Colors.white),
-              hoverColor: const Color.fromARGB(200, 0, 22, 71),
-              title: const Text(
-                'About Us',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Lora',
-                ),
-              ),
-              onTap: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const About()),
-                );
-              },
-            ),
-            Expanded(
-              child: Container(),
-            ),
-            ListTile(
-              leading: const Icon(Icons.logout_outlined, color: Colors.white),
-              tileColor: const Color.fromARGB(255, 0, 15, 50),
-              title: const Text(
-                'Logout',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Lora',
-                ),
-              ),
-              onTap: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Signin()),
-                );
-              },
-            ),
-          ],
-        ),
+      drawer: AppDrawer(
+        onHomeTap: () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => const Home()),
+          );
+        },
+        onSettingsTap: () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => const Settings()),
+          );
+        },
+        onAboutUsTap: () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => const About()),
+          );
+        },
+        onLogoutTap: () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => const Signin()),
+          );
+        },
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -319,7 +215,8 @@ class _NewsHomeState extends State<NewsHome> {
           ),
         ],
       ),
-      bottomNavigationBar: buildBottomNavigationBar(context),
+      bottomNavigationBar: BottomNavBar.buildBottomNavigationBar(
+          context, botNavBarOption, botNavBarTap),
     );
   }
 }
