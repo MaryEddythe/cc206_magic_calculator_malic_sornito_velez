@@ -17,7 +17,7 @@ class RegisterState extends State<Register> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/sample.png'),
+            image: AssetImage('assets/images/wallpaper-signin-signup.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -27,9 +27,9 @@ class RegisterState extends State<Register> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                const SizedBox(height: 200),
+                const SizedBox(height: 265),
                 Container(
-                  width: 350,
+                  width: 300,
                   child: TextFormField(
                     decoration: InputDecoration(
                       labelText: 'Email',
@@ -48,7 +48,7 @@ class RegisterState extends State<Register> {
                 ),
                 const SizedBox(height: 20),
                 Container(
-                  width: 350,
+                  width: 300,
                   child: TextFormField(
                     decoration: InputDecoration(
                       labelText: 'Fullname',
@@ -67,7 +67,7 @@ class RegisterState extends State<Register> {
                 ),
                 const SizedBox(height: 20),
                 Container(
-                  width: 350,
+                  width: 300,
                   child: TextFormField(
                     obscureText: true,
                     decoration: InputDecoration(
@@ -86,28 +86,30 @@ class RegisterState extends State<Register> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white,
-                    backgroundColor: const Color(0xFFFF001747),
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 8, horizontal: 145),
-                    shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(10.0), // Add this line
+                Container(
+                  width: 300, // Set the width to match TextFormField
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: const Color(0xFFFF001747),
+                        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 0), // Set horizontal padding to 0
+                        shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0), // Add this line
+                        ),
                     ),
-                  ),
-                  child: const Text(
-                    'Register',
-                    style: TextStyle(
+                    child: const Text(
+                      'Register',
+                      style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.2),
+                
+                SizedBox(height: MediaQuery.of(context).size.height * 0.001),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[

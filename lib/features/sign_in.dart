@@ -1,5 +1,3 @@
-// ignore_for_file: use_full_hex_values_for_flutter_colors
-
 import 'package:flutter/material.dart';
 
 import 'home.dart';
@@ -14,7 +12,7 @@ class Signin extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/sample.png'),
+            image: AssetImage('assets/images/wallpaper-signin-signup.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -27,16 +25,18 @@ class Signin extends StatelessWidget {
               Container(
                 width: 300,
                 child: TextFormField(
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     labelText: 'Username',
-                    labelStyle: TextStyle(
+                    labelStyle: const TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
                     ),
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.person),
-                    contentPadding: EdgeInsets.symmetric(vertical: 5),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0), // Added border radius
+                    ),
+                    prefixIcon: const Icon(Icons.person),
+                    contentPadding: const EdgeInsets.symmetric(vertical: 5),
                   ),
                 ),
               ),
@@ -45,16 +45,18 @@ class Signin extends StatelessWidget {
                 width: 300,
                 child: TextFormField(
                   obscureText: true,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     labelText: 'Password',
-                    labelStyle: TextStyle(
+                    labelStyle: const TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
                     ),
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.lock),
-                    contentPadding: EdgeInsets.symmetric(vertical: 5),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0), // Added border radius
+                    ),
+                    prefixIcon: const Icon(Icons.lock),
+                    contentPadding: const EdgeInsets.symmetric(vertical: 5),
                   ),
                 ),
               ),
@@ -70,7 +72,7 @@ class Signin extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(vertical: 8, horizontal: 130),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0.0),
+                    borderRadius: BorderRadius.circular(10.0),
                   ),
                 ),
                 child: const Text(
@@ -82,7 +84,7 @@ class Signin extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.2),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.001),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
