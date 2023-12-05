@@ -1,7 +1,6 @@
-import 'package:cc206_magic_calculator_malic_sornito_velez/features/landing_page.dart';
-import 'package:cc206_magic_calculator_malic_sornito_velez/onboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'onboard.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);

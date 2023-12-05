@@ -1,6 +1,6 @@
-import 'package:cc206_magic_calculator_malic_sornito_velez/features/sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import '../features/sign_in.dart';
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({Key? key}) : super(key: key);
