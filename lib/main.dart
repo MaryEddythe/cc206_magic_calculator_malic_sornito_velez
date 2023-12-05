@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'features/landing_page.dart';
 import 'splash_screen.dart';
 
 void main() {
