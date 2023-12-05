@@ -1,4 +1,5 @@
 import 'package:cc206_magic_calculator_malic_sornito_velez/features/landing_page.dart';
+import 'package:cc206_magic_calculator_malic_sornito_velez/onboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -45,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     Future.delayed(const Duration(seconds: 6), () {
       Navigator.of(currentContext).pushReplacement(MaterialPageRoute(
-        builder: (_) => const LandingPage(),
+        builder: (_) => const OnBoarding(),
       ));
     });
   }
