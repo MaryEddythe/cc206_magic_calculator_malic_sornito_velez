@@ -10,48 +10,38 @@ class OnBoarding extends StatelessWidget {
           pages: [
             PageViewModel(
               title: 'BREAKING NEWS',
-              body: 'The man who never reads lives only one.',
-              image: buildImage('assets/images/breaking news.png'),
+              body: 'It delivers current news updates and in-depth articles right to your fingertips every day. Explore a variety of topics and personalize your news feed for a tailored reading experience. Stay up-to-date effortlessly.',
+              image: buildImage(context,'assets/images/breaking news.png'),
               decoration: getPageDecoration(),
             ),
             PageViewModel(
               title: 'BUSINESS',
-              body: 'Available right at your fingerprints',
-              image: buildImage('assets/images/business.png'),
+              body: 'The application offers concise updates and comprehensive insights into the world of commerce. Stay ahead with market trends, financial reports, and expert analysis, empowering you with essential information for making informed decisions in the business landscape.',
+              image: buildImage(context,'assets/images/business.png'),
               decoration: getPageDecoration(),
             ),
             PageViewModel(
               title: 'ENTERTAINMENT',
-              body: 'For enhanced reading experience',
-              image: buildImage('assets/images/entertainment.png'),
+              body: 'Welcome to our platform! Explore the world of news with our intuitive interface. Dive into the latest headlines, personalize your news feed, and stay informed effortlessly. Begin your journey to curated news experiences tailored just for you.',
+              image: buildImage(context,'assets/images/entertainment.png'),
               decoration: getPageDecoration(),
             ),
             PageViewModel(
               title: 'UNFILTERED TRUTH',
-              body: 'No. 1 Most Trusted News Source of 2023',
-              image: buildImage('assets/images/fake news.png'),
+              body: 'Discover the unfiltered truth. Step into a realm where information reigns supreme. Our platform delivers uncensored, authentic news, empowering you with unvarnished facts and diverse perspectives. Explore a world of raw, unfiltered truth through our intuitive onboarding experience',
+              image: buildImage(context,'assets/images/fake news.png'),
               decoration: getPageDecoration(),
             ),
-            // PageViewModel(
-            //   title: 'Behold the gateway to the unfiltered truth.',
-            //   body: 'No. 1 Most Trusted News Source of 2023',
-            //   footer: ButtonWidget(
-            //     text: 'Start Reading',
-            //     onClicked: () => goToHome(context),
-            //   ),
-            //   image: buildImage('assets/images/fake news.png'),
-            //   decoration: getPageDecoration(),
-            // ),
           ],
-         done: const Text('Get Started', style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white)),
+         done: const Text('Get Started', style: TextStyle(fontWeight: FontWeight.w600, fontFamily: "Poppins", color: Colors.white)),
           onDone: () => goToHome(context),
           showSkipButton: true,
-          skip: const Text('Skip', style: TextStyle(color: Colors.white)), 
+          skip: const Text('Skip', style: TextStyle(color: Colors.white, fontFamily: "Poppins")), 
           onSkip: () => goToHome(context),
           next: const Icon(Icons.arrow_forward, color: Colors.white), 
           dotsDecorator: getDotDecoration(),
           onChange: (index) => print('Page $index selected'),
-          globalBackgroundColor: Theme.of(context).primaryColor,
+          globalBackgroundColor: Color(0xFF0D1333),
           nextFlex: 0,
         ),
       );
@@ -59,8 +49,15 @@ void goToHome(BuildContext context) => Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) => const Signin()),
       );
 
-  Widget buildImage(String path) =>
-      Center(child: Image.asset(path, width: 350));
+  Widget buildImage(BuildContext context, String path) =>
+  Center(
+    child: Image.asset(
+      path,
+      width: MediaQuery.of(context).size.width * 0.9,
+      height: MediaQuery.of(context).size.height * 0.9,
+    ),
+  );
+
 
   DotsDecorator getDotDecoration() => DotsDecorator(
         color: const Color(0xFFBDBDBD),
@@ -72,8 +69,8 @@ void goToHome(BuildContext context) => Navigator.of(context).pushReplacement(
       );
 
  PageDecoration getPageDecoration() => const PageDecoration(
-  titleTextStyle: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-  bodyTextStyle: TextStyle(fontSize: 20),
+  titleTextStyle: TextStyle(fontSize: 36, fontFamily: "Poppins", fontWeight: FontWeight.bold),
+  bodyTextStyle: TextStyle(fontSize: 12, fontFamily: "Poppins",),
   imagePadding: EdgeInsets.all(24),
   pageColor: Colors.white,
 );
